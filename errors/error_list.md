@@ -1,0 +1,16 @@
+### advantage on attack doesnt seem to apply
+- Emolas casts favor on him self, attacks next turn and advantage is not appplied. Still not applied!
+- (FIXED) Fireball rolling damage with a d20, something wrong in spell damage calculator
+- (FIXED)saving throw logic in decrement_condition not using or not referencing the spell list in the game state, which suggests saves are sometimes not supposed to be usable. but also sometimes indicates which condition should be used for the saving throw. this might be uneeded duplication.
+- (FIXED) Fireball damage roll not being showed and rolling attack damage roll which does not apply to that spell. 
+- Crits broken??
+- applying effects is broken it seems. need to generalize the application and debug it, since it used to work. but also duration coutning does not seem to work well either. 
+- entities that do not have magic spells are still presneted the option to cast one, with an empty menu for choices, which if a number is fed, crashes the engine. 
+- charmed effect/condition does not work, it does not seem to have logic to apply effect which basically should make the npc enemy consider the caster an ally and thus be unable to target with hostile attacks at least, better yet. it casts buffs on it and defends it. 
+- - conditions in fact appear to have no schematic path to affect spell casting abilities. so can't apply mute either. 
+- also mute condition seems to not exist. 
+- odd bug that kept loop going past death of players, resulting in an error where game crashes as there's no live players to take a turn, or something like that. adding log to log folder as. player dead not recognized, failed to end loop.
+- engangle has interesting error. since there's no sense of space and distance in logic, the stun has no clear effect beyond applying disadvantage. except it should also stop mele attacks. since targets can not move, they should not be able to close mele distance. however, attack does not distinguish between mele and ranged attacks like bows arrows or throwables etc. so can not turn off attack. restrained entity should maybe be able to let off an arrow, though seems fair to say that it should not. will turn off attack on it for now. 
+- - changed entangled effect to null and to none and it still fails to restrain targets. also fails to apply disadvantage. 
+- - there's another file called action_rescritions.json which seems very similar to conditions_apply.json but smaller, also has none on attack entangled and yet does not seem to be called. 
+- if user presses enter without key input, game crashes xD

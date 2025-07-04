@@ -1,0 +1,42 @@
+# Let's create a standalone reference document for the template provided by the user.
+
+template = """
+{
+  "ConditionName": {
+    "description": "A description of the condition and its effects.",
+    "self_effects": {
+      "actions": "none",             // How the condition affects the afflicted creature's actions
+      "movement": "none",            // Movement restrictions for the afflicted creature
+      "attack_roll": "null",         // How the afflicted creature's attack rolls are affected
+      "saving_throw": "disadvantage",// How the afflicted creature's saving throws are affected
+      "damage_resistance": "normal"  // Any damage resistance granted to or imposed on the afflicted creature
+    },
+    "interaction_effects": {
+      "attack_roll_against": "advantage", // How attack rolls against the afflicted creature are affected
+      "critical_hit": "yes",              // If attacks against the afflicted creature result in critical hits under certain conditions
+      "saving_throw_against": "normal"    // If attackers' saving throws are affected when interacting with the afflicted creature
+    },
+    "duration": {
+      "type": "fixed",             // Fixed, variable, or until removed
+      "value": "1d4",              // Duration of the condition (e.g., 1d4 rounds)
+      "based_on": "rounds"         // The unit of time or condition that controls the duration (rounds, until removed)
+    },
+    "removal": {
+      "removable_by": ["saving_throw", "spell"],
+      "saving_throw": {
+        "attribute": "constitution", // Attribute used for saving throw to remove the condition
+        "dc": 15,                    // Difficulty class for the saving throw
+        "resistance_allowed": true   // Whether resistance applies to the saving throw
+      },
+      "spell_removal": ["Lesser Restoration", "Greater Restoration"],
+      "special_removal": "value" // Standing up from prone, for example
+    }
+  }
+}
+"""
+
+# Save the template to a text file for the user to store for future reference
+with open("/mnt/data/dnd_condition_template.txt", "w") as file:
+    file.write(template)
+
+"/mnt/data/dnd_condition_template.txt"

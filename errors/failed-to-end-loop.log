@@ -1,0 +1,91 @@
+                    INFO     Threx the Brutal rolls (1d20 (**1**) + 4 = `5`) (disadvantage) to hit Zaryn the Enchanter (AC 16).                                                    combat_engine_3.5.py:39
+                    INFO     Threx the Brutal misses Zaryn the Enchanter with Greataxe!                                                                                            combat_engine_3.5.py:39
+                    INFO     Threx the Brutal's turn ends. Conditions & effects updated.                                                                                           combat_engine_3.5.py:39
+
+Zaryn the Enchanter's turn with 7 HP!
+1. Attack
+2. Cast a Spell
+3. Defend (placeholder action)
+Enter the number of your action: 2
+Choose a spell:
+1. Blinding Light
+2. Charm Person
+3. Thunderclap
+4. Cause Fear
+5. Grasping Vines
+6. Hold Person
+7. Invisibility
+8. Hold Monster
+9. Flesh to Stone
+10. Poison Spray
+11. Earth Tremor
+12. Entangle
+13. Stunning Strike
+14. Sleep
+Enter the number of the spell you want to cast: 12
+[07/03/25 17:41:28] INFO     Entangle affects all NPCs!                                                                                                                            combat_engine_3.5.py:39
+                    INFO     Zaryn the Enchanter casts Entangle on [<__main__.NonPlayerCharacter object at 0x7f50a77ed480>, <__main__.NonPlayerCharacter object at                 combat_engine_3.5.py:39
+                             0x7f50a77ed660>, <__main__.NonPlayerCharacter object at 0x7f50a77ed690>, <__main__.NonPlayerCharacter object at 0x7f50a77ed6c0>,                                             
+                             <__main__.NonPlayerCharacter object at 0x7f50a77ed6f0>, <__main__.NonPlayerCharacter object at 0x7f50a77ed720>]!                                                             
+                    INFO     Zaryn the Enchanter's turn ends. Conditions & effects updated.                                                                                        combat_engine_3.5.py:39
+                    INFO     Selara the Dark decides to attack Zaryn the Enchanter.                                                                                                combat_engine_3.5.py:39
+                    INFO     DEBUG 923: attack_roll -> 1d20 (17) + 3 = `20` = attack_mod -> 3, adv_disadv -> normal                                                                combat_engine_3.5.py:39
+                    INFO     Selara the Dark attacks Zaryn the Enchanter with Eldritch Blast (normal).                                                                             combat_engine_3.5.py:39
+                    INFO     Selara the Dark rolls (1d20 (17) + 3 = `20`) (normal) to hit Zaryn the Enchanter (AC 16).                                                             combat_engine_3.5.py:39
+                    INFO     Selara the Dark hits Zaryn the Enchanter with Eldritch Blast for 1d10 (2) + 3 = `5` damage!                                                           combat_engine_3.5.py:39
+                    INFO     Zaryn the Enchanter's HP is now 2.                                                                                                                    combat_engine_3.5.py:39
+                    INFO     Selara the Dark's turn ends. Conditions & effects updated.                                                                                            combat_engine_3.5.py:39
+                    INFO     Goblin Witch decides to attack Zaryn the Enchanter.                                                                                                   combat_engine_3.5.py:39
+                    INFO     DEBUG 923: attack_roll -> 1d20 (14) + 2 = `16` = attack_mod -> 2, adv_disadv -> normal                                                                combat_engine_3.5.py:39
+                    INFO     Goblin Witch attacks Zaryn the Enchanter with Magic Staff (normal).                                                                                   combat_engine_3.5.py:39
+                    INFO     Goblin Witch rolls (1d20 (14) + 2 = `16`) (normal) to hit Zaryn the Enchanter (AC 16).                                                                combat_engine_3.5.py:39
+                    INFO     Goblin Witch hits Zaryn the Enchanter with Magic Staff for 1d4 (**4**) + 2 = `6` damage!                                                              combat_engine_3.5.py:39
+                    INFO     Zaryn the Enchanter has been defeated!                                                                                                                combat_engine_3.5.py:39
+                    INFO     Zaryn the Enchanter has been removed from the initiative order.                                                                                       combat_engine_3.5.py:39
+                    INFO     Goblin Witch's turn ends. Conditions & effects updated.                                                                                               combat_engine_3.5.py:39
+╭─────────────────────────────── Traceback (most recent call last) ────────────────────────────────╮
+│ /media/yarvis/WD_Elements/repos/ChatDND/5.1_half_moon/combat_engine/combat_engine_3.5.py:1206 in │
+│ <module>                                                                                         │
+│                                                                                                  │
+│   1203 │   engine = CombatEngine(players, npcs)                                                  │
+│   1204 │   engine.start_combat()                                                                 │
+│   1205                                                                                           │
+│ ❱ 1206 def load_conditions(filepath):                                                            │
+│   1207 │   with open(filepath, 'r') as file:                                                     │
+│   1208 │   │   conditions_data = json.load(file)                                                 │
+│   1209 │   return conditions_data['conditions']                                                  │
+│                                                                                                  │
+│ /media/yarvis/WD_Elements/repos/ChatDND/5.1_half_moon/combat_engine/combat_engine_3.5.py:578 in  │
+│ start_combat                                                                                     │
+│                                                                                                  │
+│    575 │   │   │   log_message(f"[bold yellow]--- Round {self.round_number}: Start!---[/bold ye  │
+│    576 │   │   │   for character in self.initiative_order:                                       │
+│    577 │   │   │   │   if character.is_alive():                                                  │
+│ ❱  578 │   │   │   │   │   self.take_turn(character)                                             │
+│    579 │   │   │   self.end_round()                                                              │
+│    580 │   │                                                                                     │
+│    581 │   │   # End of combat message                                                           │
+│                                                                                                  │
+│ /media/yarvis/WD_Elements/repos/ChatDND/5.1_half_moon/combat_engine/combat_engine_3.5.py:618 in  │
+│ take_turn                                                                                        │
+│                                                                                                  │
+│    615 │   │   if isinstance(character, PlayerCharacter):                                        │
+│    616 │   │   │   self.handle_player_turn(character)                                            │
+│    617 │   │   else:                                                                             │
+│ ❱  618 │   │   │   self.handle_npc_turn(character)                                               │
+│    619 │   │                                                                                     │
+│    620 │   │   # Decrement condition durations after the character's turn                        │
+│    621                                                                                           │
+│                                                                                                  │
+│ /media/yarvis/WD_Elements/repos/ChatDND/5.1_half_moon/combat_engine/combat_engine_3.5.py:1102 in │
+│ handle_npc_turn                                                                                  │
+│                                                                                                  │
+│   1099 │   │   target = self.choose_weakest_player(self.players)  # Example target selection     │
+│   1100 │   │   log_message(f"{npc.name} decides to attack {target.name}.")                       │
+│   1101 │   │   chosen_weapon = npc.inventory[0]  # For simplicity, NPC uses the first weapon     │
+│ ❱ 1102 │   │   self.attack(npc, target, chosen_weapon)                                           │
+│   1103 │                                                                                         │
+│   1104 │   def choose_weakest_player(self, players):                                             │
+│   1105 │   │   """Selects the player with the lowest HP as the target for NPC attacks, only con  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+AttributeError: 'NoneType' object has no attribute 'name'

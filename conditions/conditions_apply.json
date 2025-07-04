@@ -1,0 +1,409 @@
+{
+    "blinded": {
+      "description": "A blinded creature can’t see and automatically fails any ability check that requires sight.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "normal",
+        "attack_roll": "disadvantage",
+        "saving_throw": "normal",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "advantage",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "fixed",
+        "value": "10",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["saving_throw"],
+        "saving_throw": {
+          "attribute": "constitution",
+          "dc": 15,
+          "resistance_allowed": true
+        },
+        "spell_removal": ["Greater Restoration"],
+        "special_removal": null
+      }
+    },
+    "charmed": {
+      "description": "A charmed creature can’t attack the charmer or target the charmer with harmful abilities or magical effects.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "normal",
+        "attack_roll": "normal",
+        "saving_throw": "normal",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+    "attack_roll_against": "normal",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "variable",
+        "value": "concentration",
+        "based_on": "caster"
+      },
+      "removal": {
+        "removable_by": ["dispel_magic", "saving_throw"],
+        "saving_throw": {
+          "attribute": "wisdom",
+          "dc": 16,
+          "resistance_allowed": true
+        },
+        "spell_removal": ["Dispel Magic"],
+        "special_removal": null
+      }
+    },
+    "deafened": {
+      "description": "A deafened creature can’t hear and automatically fails any ability check that requires hearing.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "normal",
+        "attack_roll": "normal",
+        "saving_throw": "normal",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "normal",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "fixed",
+        "value": "1d4",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["healing", "lesser_restoration"],
+        "spell_removal": ["Lesser Restoration"],
+        "special_removal": null
+      }
+    },
+    "2": {
+      "description": "A frightened creature has disadvantage on ability checks and attack rolls while the source of its fear is within line of sight.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "can't move closer",
+        "attack_roll": "disadvantage",
+        "saving_throw": "disadvantage",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "normal",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "variable",
+        "value": "1d4",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["saving_throw"],
+        "saving_throw": {
+          "attribute": "wisdom",
+          "dc": 13,
+          "resistance_allowed": true
+        },
+        "spell_removal": ["Greater Restoration"],
+        "special_removal": null
+      }
+    },
+    "grappled": {
+      "description": "A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "0",
+        "attack_roll": "normal",
+        "saving_throw": "normal",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "normal",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "until_removed",
+        "value": "until_removed",
+        "based_on": "escape_action"
+      },
+      "removal": {
+        "removable_by": ["escape_action"],
+        "saving_throw": {
+          "attribute": "athletics or acrobatics",
+          "dc": "contested",
+          "resistance_allowed": false
+        },
+        "spell_removal": [],
+        "special_removal": null
+      }
+    },
+    "incapacitated": {
+      "description": "An incapacitated creature can’t take actions or reactions.",
+      "self_effects": {
+        "actions": "none",
+        "movement": "none",
+        "attack_roll": "null",
+        "saving_throw": "null",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "normal",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "fixed",
+        "value": "2",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["fixed_duration"],
+        "saving_throw": {
+          "attribute": null,
+          "dc": null,
+          "resistance_allowed": false
+        },
+        "spell_removal": ["Greater Restoration"],
+        "special_removal": null
+      }
+    },
+    "invisible": {
+      "description": "An invisible creature is impossible to see without the aid of magic or a special sense.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "normal",
+        "attack_roll": "advantage",
+        "saving_throw": "normal",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "disadvantage",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "fixed",
+        "value": "10",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["dispel_magic", "successful_attack"],        
+        "saving_throw": {
+          "attribute": null,
+          "dc": null,
+          "resistance_allowed": false
+        },
+        "spell_removal": ["Dispel Magic"],
+        "special_removal": null
+      }
+    },
+    "paralyzed": {
+      "description": "A paralyzed creature is incapacitated, can’t move or speak, and is vulnerable to melee critical hits within 5 feet.",
+      "self_effects": {
+        "actions": "none",
+        "movement": "none",
+        "attack_roll": "null",
+        "saving_throw": "null",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "advantage",
+        "critical_hit": "yes",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "variable",
+        "value": "1d4",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["saving_throw", "spell"],
+        "saving_throw": {
+          "attribute": "constitution",
+          "dc": 15,
+          "resistance_allowed": true
+        },
+        "spell_removal": ["Greater Restoration", "Lesser Restoration"],
+        "special_removal": null
+      }
+    },
+    "petrified": {
+      "description": "A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance.",
+      "self_effects": {
+        "actions": "none",
+        "movement": "none",
+        "attack_roll": "null",
+        "saving_throw": "null",
+        "damage_resistance": "immunity"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "advantage",
+        "critical_hit": "yes",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "permanent",
+        "value": "until_removed",
+        "based_on": "condition_removal"
+      },
+      "removal": {
+        "removable_by": ["Greater Restoration"],
+        "saving_throw": {
+          "attribute": null,
+          "dc": null,
+          "resistance_allowed": false
+        },
+        "spell_removal": ["Greater Restoration"],
+        "special_removal": null
+      }
+    },
+    "poisoned": {
+      "description": "A poisoned creature has disadvantage on attack rolls and ability checks.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "normal",
+        "attack_roll": "disadvantage",
+        "saving_throw": "disadvantage",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "normal",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "variable",
+        "value": "1d4",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["saving_throw"],
+        "saving_throw": {
+          "attribute": "constitution",
+          "dc": 14,
+          "resistance_allowed": true
+        },
+        "spell_removal": ["Lesser Restoration"],
+        "special_removal": null
+      }
+    },
+    "prone": {
+      "description": "A prone creature’s only movement option is to crawl, unless it stands up and thereby ends the condition.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "half_speed",
+        "attack_roll": "disadvantage",
+        "saving_throw": "normal",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "advantage",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "until_removed",
+        "value": "until_stand",
+        "based_on": "action"
+      },
+      "removal": {
+        "removable_by": ["stand_up_action"],
+        "spell_removal": [],
+        "special_removal": null
+
+      }
+    },
+    "restrained": {
+      "description": "A restrained creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.",
+      "self_effects": {
+        "actions": "normal",
+        "movement": "0",
+        "attack_roll": "none",
+        "saving_throw": "disadvantage",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "advantage",
+        "critical_hit": "no",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "until_removed",
+        "value": "until_removed",
+        "based_on": "condition_removal"
+      },
+      "removal": {
+        "removable_by": ["escape_action"],
+        "saving_throw": {
+          "attribute": "athletics or acrobatics",
+          "dc": "contested",
+          "resistance_allowed": false
+        },
+        "spell_removal": [],
+        "special_removal": null
+      }
+    },
+    "stunned": {
+      "description": "A stunned creature is incapacitated, can’t move, and can speak only falteringly.",
+      "self_effects": {
+        "actions": "none",
+        "movement": "none",
+        "attack_roll": "null",
+        "saving_throw": "null",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "advantage",
+        "critical_hit": "yes",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "fixed",
+        "value": "1",
+        "based_on": "rounds"
+      },
+      "removal": {
+        "removable_by": ["saving_throw"],
+        "saving_throw": {
+          "attribute": "constitution",
+          "dc": 15,
+          "resistance_allowed": true
+        },
+        "spell_removal": ["Greater Restoration"],
+        "special_removal": null
+      }
+    },
+    "unconscious": {
+      "description": "An unconscious creature is incapacitated, can’t move or speak, and is unaware of its surroundings.",
+      "self_effects": {
+        "actions": "none",
+        "movement": "none",
+        "attack_roll": "none",
+        "saving_throw": "null",
+        "damage_resistance": "normal"
+      },
+      "interaction_effects": {
+        "attack_roll_against": "advantage",
+        "critical_hit": "yes",
+        "saving_throw_against": "normal"
+      },
+      "duration": {
+        "type": "until_removed",
+        "value": "until_awakened",
+        "based_on": "condition_removal"
+      },
+      "removal": {
+        "removable_by": ["healing", "natural_recovery"],
+        "spell_removal": ["Healing"],
+        "special_removal": null
+      }
+    }
+  }
+  
