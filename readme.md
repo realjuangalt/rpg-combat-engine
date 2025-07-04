@@ -1,67 +1,77 @@
-character data on game_state.json file
-# RPG Combat Engine
-## Overview
-This project is an RPG combat engine designed to simulate combat encounters in a Dungeons & Dragons 5th Edition (5e) style game. The engine handles various aspects of combat, including initiative rolls, action resolution, condition management, and logging.
+# D&D 5e Character Generator
 
-## Features
-* **Initiative Rolls**: Determines the order of actions in combat.
-* **Action Resolution**: Handles attacks, spell casting, and other actions.
-* **Condition Management**: Applies and tracks conditions like "stunned" or "poisoned".
-* **Effect Management**: Applies and tracks effects like buffs and debuffs.
-* **Logging**: Uses the rich library for detailed logging and console output.
+This project provides a command-line tool for generating D&D 5e characters using the Venice AI API. The tool allows users to input a character name and description, and it generates a detailed character sheet and lore sheet based on the provided input.
 
-## Project Structure
+## Table of Contents
+- [Installation](#installation)
+- [Setup](#setup)
+- [Usage](#usage)
+- [How It Works](#how-it-works)
+- [File Structure](#file-structure)
+- [Output Format](#output-format)
 
-## Getting Started
-### Prerequisites
-* Python 3.7+
-* rich library for enhanced console output and logging
-* d20 library for dice rolling
+## Installation
 
-### Installation
-1. Clone the repository:
-2. Install the required libraries:
+To use the character generator, ensure you have Python 3 installed on your system along with the required libraries:
 
-### Usage
-1. Prepare your game state in `game_state.json`:
-2. Run the combat engine:
+```bash
+pip install requests python-dotenv
+```
 
-## Configuration
-* **Conditions**: Define conditions in `conditions_apply.json`:
-* **Class Data**: Define class-specific data in `class_data.py`:
+## Setup
 
-## Classes and Methods
-### CombatEngine
-* `__init__(self, players, npcs)`: Initializes the combat engine with players and NPCs.
-* `determine_initiative(self)`: Rolls for initiative and determines the order of actions.
-* `start_combat(self)`: Starts the combat loop.
-* `take_turn(self, character)`: Handles the turn logic for a character.
-* `execute_action(self, character, action)`: Executes the chosen action.
-* `is_combat_over(self)`: Checks if the combat is over.
-* `end_round(self)`: Handles end-of-round logic.
+1. **API Key Configuration**: 
+   - Create a `.env` file in the project directory with the following content:
+     ```
+     VENICE_API_KEY=your_api_key_here
+     ```
+   - Replace `your_api_key_here` with your actual Venice AI API key. This key is used to authenticate requests to the Venice AI API endpoint (`https://api.venice.ai/api/v1/chat/completions`).
 
-### Character
-* `__init__(self, name, hp, ac, strength, dexterity, constitution, intelligence, wisdom, charisma, damage, inventory, class_type, spells=None, conditions=None, speed=30, effects=None)`: Initializes a character.
-* `apply_condition_with_effects(self, condition_name, duration, spell=None)`: Applies a condition and its effects.
-* `decrement_conditions(self, combat_engine)`: Decrements the duration of conditions.
-* `remove_condition(self, condition_name)`: Removes a condition.
-* `apply_effect(self, effect_name, attribute, modifier, duration)`: Applies an effect.
-* `remove_expired_effects(self)`: Removes expired effects.
-* `roll_initiative(self)`: Rolls for initiative.
-* `take_damage(self, amount)`: Reduces the character's HP.
-* `is_alive(self)`: Checks if the character is alive.
+2. **Template Specification**:
+   - Ensure the `gs_template.md` file is present in the project directory. This file contains the specification for the character data structure that the LLM uses to format the output.
 
-### Effect
-* `__init__(self, name, attribute, modifier, duration)`: Initializes an effect.
-* `apply(self, character)`: Applies the effect to a character.
-* `remove(self, character)`: Removes the effect from a character.
-* `decrement_duration(self)`: Decreases the duration of the effect.
+## Usage
 
-## Logging
-The engine uses the rich library for logging and console output. Logs are written to `game_session.log` and displayed in the console with rich formatting.
+Run the character generator script from the command line:
 
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
+```bash
+python character_generator.py
+```
 
-## License
-This project is licensed under the MIT License.
+- You will be prompted to enter a character name and a description (e.g., "a brave elven wizard skilled in fire magic").
+- The script will generate a character sheet and a lore sheet based on the input, saving them to the `/players` folder as `character_<name>.json` and `lore_<name>.txt` respectively.
+- Type `exit` at any prompt to quit the program.
+
+## How It Works
+
+The `character_generator.py` script operates as follows:
+
+1. **Environment Setup**: Loads the Venice AI API key from the `.env` file using the `python-dotenv` library to authenticate API requests.
+2. **Template Loading**: Reads the character data structure specification from `gs_template.md` as a text file, which is included in the API prompt to guide the LLM's output format.
+3. **Character Generation**:
+   - Prompts the user for a character name and description.
+   - Sends a request to the Venice AI API (`llama-3.3-70b` model) with a system prompt and user prompt that includes the template specification and instructions to ensure base values for spells and attacks are compliant with the d20 library (e.g., '1d8', '2d6+3').
+   - Cleans the response to remove markdown formatting (like ```json) and parses it as JSON.
+   - Extracts the character data from the `players` array in the response.
+4. **Lore Sheet Generation**:
+   - Sends a second API request to generate a basic lore sheet (backstory and personality traits) for the character using the same name and description.
+5. **Saving Output**:
+   - Saves the character data to `/players/character_<name>.json`.
+   - Saves the lore sheet to `/players/lore_<name>.txt`.
+
+The script handles errors such as invalid JSON responses, API failures, and missing template files, providing appropriate feedback to the user.
+
+## File Structure
+
+- `.env`: Contains the Venice AI API key for authentication.
+- `gs_template.md`: Specification for the character data structure used in the API prompt.
+- `character_generator.py`: Main script for generating characters and lore sheets.
+- `/players/`: Directory where generated character JSON files and lore text files are saved.
+
+## Output Format
+
+- **Character Sheet (`character_<name>.json`)**: A JSON file containing detailed character stats, inventory, spells, and conditions, structured as per the specification in `gs_template.md`.
+- **Lore Sheet (`lore_<name>.txt`)**: A plain text file with a short backstory (2-3 sentences) and personality traits (2-3 bullet points) for the character.
+
+Example character filename: `players/character_Jarvis.json`
+Example lore filename: `players/lore_Jarvis.txt`

@@ -1,13 +1,14 @@
 
 [bold cyan]--- Combat Begins --- [/bold cyan]
-Zaryn the Enchanter rolls 5 for initiative.
-Emolas rolls 19 for initiative.
-Threx the Brutal rolls 8 for initiative.
-Selara the Dark rolls 11 for initiative.
-Orc rolls 11 for initiative.
-Goblin rolls 17 for initiative.
-Troll rolls 3 for initiative.
-Goblin Witch rolls 19 for initiative.
+Jarvis rolls 4 for initiative.
+Zaryn the Enchanter rolls 7 for initiative.
+Emolas rolls 23 for initiative.
+Threx the Brutal rolls 13 for initiative.
+Selara the Dark rolls 21 for initiative.
+Orc rolls 18 for initiative.
+Goblin rolls 7 for initiative.
+Troll rolls 13 for initiative.
+Goblin Witch rolls 9 for initiative.
 [bold yellow]--- Round 1: Start!---[/bold yellow]
 DEBUG 858: Actually casting debuff spell {'name': 'Curse of Misfortune', 'type': 'debuff', 'effect': {'attribute': 'adv_disadv', 'modifier': 'disadvantage', 'duration': 3}, 'targeting': 'single'}
 Threx the Brutal now has disadvantage on advantage/disadvantage.
@@ -15,35 +16,4 @@ Curse of Misfortune applied to Threx the Brutal.
 [bold yellow]Emolas cast Curse of Misfortune on Threx the Brutal debuffing it with disadvantage for 3 round(s).[/bold yellow]
 Threx the Brutal is now affected by the buff for 3 rounds.
 Emolas's turn ends. Conditions & effects updated.
-Goblin Witch decides to attack Emolas.
-attack_roll -> 1d20 (15) + 2 = `17` = attack_mod -> 2, adv_disadv -> normal
-Goblin Witch attacks Emolas with Magic Staff (normal).
-Goblin Witch rolls (1d20 (15) + 2 = `17`) (normal) to hit Emolas (AC 15).
-[bold yellow]Goblin Witch hits Emolas with Magic Staff for 1d4 (**4**) + 2 = `6` damage![/bold yellow]
-Emolas's HP is now 39.
-Goblin Witch's turn ends. Conditions & effects updated.
-Goblin decides to attack Emolas.
-attack_roll -> 1d20 (9) + 2 = `11` = attack_mod -> 2, adv_disadv -> normal
-Goblin attacks Emolas with Scimitar (normal).
-Goblin rolls (1d20 (9) + 2 = `11`) (normal) to hit Emolas (AC 15).
-Goblin misses Emolas with Scimitar!
-Goblin's turn ends. Conditions & effects updated.
-Selara the Dark decides to attack Emolas.
-attack_roll -> 1d20 (17) + 3 = `20` = attack_mod -> 3, adv_disadv -> normal
-Selara the Dark attacks Emolas with Eldritch Blast (normal).
-Selara the Dark rolls (1d20 (17) + 3 = `20`) (normal) to hit Emolas (AC 15).
-[bold yellow]Selara the Dark hits Emolas with Eldritch Blast for 1d10 (5) + 3 = `8` damage![/bold yellow]
-Emolas's HP is now 31.
-Selara the Dark's turn ends. Conditions & effects updated.
-Orc decides to attack Emolas.
-attack_roll -> 1d20 (7) + 2 = `9` = attack_mod -> 2, adv_disadv -> normal
-Orc attacks Emolas with Greataxe (normal).
-Orc rolls (1d20 (7) + 2 = `9`) (normal) to hit Emolas (AC 15).
-Orc misses Emolas with Greataxe!
-Orc's turn ends. Conditions & effects updated.
-Threx the Brutal decides to attack Emolas.
-attack_roll -> 1d20 (**1**) + 4 = `5` = attack_mod -> 4, adv_disadv -> disadvantage
-Threx the Brutal attacks Emolas with Greataxe (disadvantage).
-Threx the Brutal rolls (1d20 (**1**) + 4 = `5`) (disadvantage) to hit Emolas (AC 15).
-Threx the Brutal misses Emolas with Greataxe!
-Threx the Brutal's turn ends. Conditions & effects updated.
+Selara the Dark decides to attack Jarvis.

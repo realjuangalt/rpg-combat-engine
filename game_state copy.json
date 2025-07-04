@@ -1,0 +1,320 @@
+{
+    "players": [
+        {
+            "name": "Jarvis",
+            "hp": 10,
+            "ac": 12,
+            "strength": 8,
+            "dexterity": 14,
+            "constitution": 10,
+            "intelligence": 18,
+            "wisdom": 12,
+            "charisma": 16,
+            "class_type": "wizard",
+            "damage": "1d8",
+            "inventory": [
+                {
+                "name": "Quarterstaff",
+                "type": "melee",
+                "damage": "1d8",
+                "finesse": false,
+                "versatile": {
+                    "one_hand": "1d8",
+                    "two_hands": "1d10"
+                },
+                "mod": "strength"
+                },
+                {
+                "name": "Dagger",
+                "type": "melee",
+                "damage": "1d4",
+                "finesse": true,
+                "mod": "dexterity"
+                },
+                {
+                "name": "Component Pouch",
+                "type": "magic",
+                "damage": "",
+                "finesse": false,
+                "mod": "intelligence"
+                }
+            ],
+            "spells": [
+                {
+                "name": "Minor Illusion",
+                "type": "utility",
+                "damage": "",
+                "healing": "",
+                "effect": {
+                    "attribute": "visibility",
+                    "modifier": "hidden",
+                    "duration": 1
+                },
+                "save": "",
+                "dc": 15,
+                "targeting": "single"
+                },
+                {
+                "name": "Suggestion",
+                "type": "buff",
+                "damage": "",
+                "healing": "",
+                "effect": {
+                    "attribute": "behavior",
+                    "modifier": "controlled",
+                    "duration": 8
+                },
+                "save": "wisdom",
+                "dc": 15,
+                "targeting": "single"
+                },
+                {
+                "name": "Charm Person",
+                "type": "buff",
+                "damage": "",
+                "healing": "",
+                "effect": {
+                    "attribute": "behavior",
+                    "modifier": "friendly",
+                    "duration": 8
+                },
+                "save": "wisdom",
+                "dc": 15,
+                "targeting": "single"
+                }
+            ],
+        "conditions": {}
+       }   
+    ], 
+    "npcs": [
+        {
+            "name": "Threx the Brutal",
+            "hp": 60,
+            "ac": 14,
+            "strength": 18,
+            "dexterity": 12,
+            "constitution": 16,
+            "intelligence": 8,
+            "wisdom": 10,
+            "charisma": 9,
+            "class_type": "barbarian",
+            "damage": "2d6",
+            "inventory": [
+                {
+                    "name": "Greataxe",
+                    "type": "melee",
+                    "damage": "1d12",
+                    "finesse": false,
+                    "versatile": {
+                        "one_hand": null,
+                        "two_hands": "1d12"
+                    },
+                    "mod": "strength"
+                },
+                {
+                    "name": "Handaxe",
+                    "type": "melee",
+                    "damage": "1d6",
+                    "finesse": false,
+                    "versatile": {
+                        "one_hand": "1d6",
+                        "two_hands": null
+                    },
+                    "mod": "strength"
+                }
+            ],
+            "spells": [],
+            "conditions": {}
+        },
+        {
+            "name": "Selara the Dark",
+            "hp": 40,
+            "ac": 13,
+            "strength": 10,
+            "dexterity": 14,
+            "constitution": 12,
+            "intelligence": 14,
+            "wisdom": 12,
+            "charisma": 16,
+            "class_type": "warlock",
+            "damage": "1d10",
+            "inventory": [
+                {
+                    "name": "Eldritch Blast",
+                    "type": "magic",
+                    "damage": "1d10",
+                    "finesse": false,
+                    "versatile": {
+                        "one_hand": null,
+                        "two_hands": null
+                    },
+                    "mod": "charisma"
+                },
+                {
+                    "name": "Dagger",
+                    "type": "melee",
+                    "damage": "1d4",
+                    "finesse": true,
+                    "versatile": {
+                        "one_hand": "1d4",
+                        "two_hands": null
+                    },
+                    "mod": "dexterity"
+                }
+            ],
+            "spells": [
+                {
+                    "name": "Hex",
+                    "type": "condition",
+                    "effect": {
+                        "attribute": "disadvantage",
+                        "modifier": 0,
+                        "duration": 1
+                    },
+                    "save": null,
+                    "dc": null,
+                    "targeting": "single"
+                },
+                {
+                    "name": "Hellish Rebuke",
+                    "type": "damage",
+                    "damage": "2d10",
+                    "effect": {
+                        "attribute": "fire",
+                        "modifier": 0,
+                        "duration": null
+                    },
+                    "save": "dexterity",
+                    "dc": 14,
+                    "targeting": "single"
+                }
+            ],
+            "conditions": {}
+        },                
+        {
+            "name": "Orc",
+            "hp": 15,
+            "ac": 13,
+            "strength": 14,
+            "dexterity": 12,
+            "constitution": 13,
+            "intelligence": 8,
+            "wisdom": 10,
+            "charisma": 6,
+            "class_type": "fighter",
+            "damage": "1d6",
+            "inventory": [
+                {
+                    "name": "Greataxe",
+                    "type": "melee",
+                    "damage": "1d12",
+                    "finesse": false,
+                    "mod": "strength"
+                }
+            ],
+            "conditions": {}
+        },
+        {
+            "name": "Goblin",
+            "hp": 12,
+            "ac": 15,
+            "strength": 10,
+            "dexterity": 14,
+            "constitution": 10,
+            "intelligence": 8,
+            "wisdom": 8,
+            "charisma": 8,
+            "class_type": "fighter",
+            "damage": "1d6",
+            "inventory": [
+                {
+                    "name": "Scimitar",
+                    "type": "melee",
+                    "damage": "1d6",
+                    "finesse": true,
+                    "mod": "dexterity"
+                },
+                {
+                    "name": "Shortbow",
+                    "type": "ranged",
+                    "damage": "1d6",
+                    "finesse": false,
+                    "mod": "dexterity"
+                }
+            ],
+            "conditions": {}
+        },
+        {
+            "name": "Troll",
+            "hp": 30,
+            "ac": 13,
+            "strength": 18,
+            "dexterity": 10,
+            "constitution": 16,
+            "intelligence": 7,
+            "wisdom": 9,
+            "charisma": 6,
+            "class_type": "barbarian",
+            "damage": "1d10",
+            "inventory": [
+                {
+                    "name": "Club",
+                    "type": "melee",
+                    "damage": "1d10",
+                    "finesse": false,
+                    "mod": "strength"
+                }
+            ],
+            "conditions": {}
+        },
+        {
+            "name": "Goblin Witch",
+            "hp": 18,
+            "ac": 12,
+            "strength": 8,
+            "dexterity": 14,
+            "constitution": 10,
+            "intelligence": 14,
+            "wisdom": 12,
+            "charisma": 10,
+            "class_type": "sorcerer",
+            "damage": "1d4",
+            "inventory": [
+                {
+                    "name": "Magic Staff",
+                    "type": "magic",
+                    "damage": "1d4",
+                    "finesse": false,
+                    "mod": "intelligence"
+                }
+            ],
+            "spells": [
+                {
+                    "name": "Magic Missile",
+                    "type": "damage",
+                    "damage": "3d4+3",
+                    "save": null,
+                    "dc": null,
+                    "targeting": "single"
+                },
+                {
+                    "name": "Burning Hands",
+                    "type": "damage",
+                    "damage": "3d6",
+                    "save": "dexterity",
+                    "dc": 13,
+                    "targeting": "aoe"
+                },
+                {
+                    "name": "Cure Wounds",
+                    "type": "healing",
+                    "healing": "1d8+3",
+                    "save": null,
+                    "dc": null,
+                    "targeting": "self"
+                }
+            ],
+            "conditions": {}
+        }
+    ]
+}
