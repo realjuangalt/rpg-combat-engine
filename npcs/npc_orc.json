@@ -1,0 +1,27 @@
+{
+  "name": "Orc",
+  "description": "A brutish humanoid with green skin and tusks, driven by a thirst for battle.",
+  "hp": 15,
+  "ac": 13,
+  "strength": 14,
+  "dexterity": 12,
+  "constitution": 13,
+  "intelligence": 8,
+  "wisdom": 10,
+  "charisma": 6,
+  "class_type": "fighter",
+  "damage": "1d6",
+  "inventory": [
+    {
+      "name": "Greataxe",
+      "description": "A large, heavy axe designed for devastating two-handed strikes.",
+      "type": "melee",
+      "damage": "1d12",
+      "finesse": false,
+      "versatile": false,
+      "mod": "strength"
+    }
+  ],
+  "spells": [],
+  "conditions": {}
+}

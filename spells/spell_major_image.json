@@ -1,0 +1,13 @@
+{
+  "name": "Major Image",
+  "description": "You create an illusion of an object, creature, or scene, which seems completely real.",
+  "type": "utility",
+  "effect": {
+    "attribute": "intelligence",
+    "modifier": "+3",
+    "duration": 1
+  },
+  "save": "intelligence",
+  "dc": 18,
+  "targeting": "aoe"
+}

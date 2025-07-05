@@ -1,0 +1,13 @@
+{
+  "name": "Dancing Lights",
+  "description": "You create up to four torch-sized lights that hover and move at your command, illuminating an area.",
+  "type": "utility",
+  "effect": {
+    "attribute": "visibility",
+    "modifier": "bright",
+    "duration": 10
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

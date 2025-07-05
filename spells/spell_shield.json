@@ -1,0 +1,13 @@
+{
+  "name": "Shield",
+  "description": "An invisible barrier of magical force protects you, increasing your AC temporarily.",
+  "type": "buff",
+  "effect": {
+    "attribute": "ac",
+    "modifier": 5,
+    "duration": 1
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

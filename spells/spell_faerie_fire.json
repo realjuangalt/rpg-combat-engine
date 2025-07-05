@@ -1,0 +1,13 @@
+{
+  "name": "Faerie Fire",
+  "description": "Each object in a 20-foot cube is outlined in light, granting advantage on attack rolls against affected creatures.",
+  "type": "utility",
+  "effect": {
+    "attribute": "visibility",
+    "modifier": "advantage on attacks",
+    "duration": 10
+  },
+  "save": "dexterity",
+  "dc": 14,
+  "targeting": "aoe"
+}

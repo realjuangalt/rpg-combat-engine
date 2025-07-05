@@ -1,0 +1,13 @@
+{
+  "name": "Curse of Misfortune",
+  "description": "You curse a creature with ill luck, hindering their actions.",
+  "type": "debuff",
+  "effect": {
+    "attribute": "adv_disadv",
+    "modifier": "disadvantage",
+    "duration": 3
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "single"
+}

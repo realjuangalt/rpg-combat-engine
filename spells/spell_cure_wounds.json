@@ -1,0 +1,14 @@
+{
+  "name": "Cure Wounds",
+  "description": "A creature you touch regains a number of hit points, healing minor wounds.",
+  "type": "healing",
+  "healing": "1d8+3",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

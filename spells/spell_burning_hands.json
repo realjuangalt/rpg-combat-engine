@@ -1,0 +1,14 @@
+{
+  "name": "Burning Hands",
+  "description": "A thin sheet of flames shoots from your hands, burning creatures in a cone.",
+  "type": "damage",
+  "damage": "3d6",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "dexterity",
+  "dc": 13,
+  "targeting": "aoe"
+}

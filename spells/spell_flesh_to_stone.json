@@ -1,0 +1,13 @@
+{
+  "name": "Flesh to Stone",
+  "description": "You attempt to turn a creature to stone, petrifying them over time.",
+  "type": "utility",
+  "effect": {
+    "attribute": "constitution",
+    "modifier": "petrified",
+    "duration": 0
+  },
+  "save": "constitution",
+  "dc": 17,
+  "targeting": "single"
+}

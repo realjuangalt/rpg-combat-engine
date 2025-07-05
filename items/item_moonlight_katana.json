@@ -1,0 +1,9 @@
+{
+  "name": "Moonlight Katana",
+  "description": "A sleek, magical blade that gleams faintly under moonlight, imbued with enchantments for swift and deadly strikes.",
+  "type": "melee",
+  "damage": "1d8+3",
+  "finesse": true,
+  "versatile": false,
+  "mod": "dexterity"
+}

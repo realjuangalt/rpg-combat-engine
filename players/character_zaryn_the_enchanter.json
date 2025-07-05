@@ -1,0 +1,216 @@
+{
+  "name": "Zaryn the Enchanter",
+  "description": "",
+  "hp": 52,
+  "ac": 16,
+  "strength": 8,
+  "dexterity": 14,
+  "constitution": 14,
+  "intelligence": 12,
+  "wisdom": 10,
+  "charisma": 18,
+  "class_type": "sorcerer",
+  "damage": "1d4",
+  "inventory": [
+    {
+      "name": "Dagger",
+      "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+      "type": "melee",
+      "damage": "1d4",
+      "finesse": true,
+      "versatile": {
+        "one_hand": "1d4",
+        "two_hands": null
+      },
+      "mod": "dexterity"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Blinding Light",
+      "description": "You conjure a burst of radiant light, temporarily blinding a creature.",
+      "type": "utility",
+      "effect": {
+        "attribute": "visibility",
+        "modifier": "blinded",
+        "duration": 2
+      },
+      "save": "constitution",
+      "dc": 14,
+      "targeting": "single"
+    },
+    {
+      "name": "Charm Person",
+      "description": "You attempt to charm a humanoid, making them regard you as a friendly acquaintance.",
+      "type": "utility",
+      "effect": {
+        "attribute": "charisma",
+        "modifier": "charmed",
+        "duration": 10
+      },
+      "save": "wisdom",
+      "dc": 13,
+      "targeting": "single"
+    },
+    {
+      "name": "Thunderclap",
+      "description": "You create a burst of thunderous sound, damaging and deafening nearby creatures.",
+      "type": "damage",
+      "damage": "2d6",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": "constitution",
+      "dc": 15,
+      "targeting": "aoe"
+    },
+    {
+      "name": "Cause Fear",
+      "description": "You instill overwhelming fear in a creature, causing them to flee or cower.",
+      "type": "utility",
+      "effect": {
+        "attribute": "wisdom",
+        "modifier": "frightened",
+        "duration": 1
+      },
+      "save": "wisdom",
+      "dc": 14,
+      "targeting": "single"
+    },
+    {
+      "name": "Grasping Vines",
+      "description": "Magical vines sprout from the ground, entangling a creature.",
+      "type": "utility",
+      "effect": {
+        "attribute": "dexterity",
+        "modifier": "grappled",
+        "duration": 1
+      },
+      "save": "strength",
+      "dc": 14,
+      "targeting": "single"
+    },
+    {
+      "name": "Hold Person",
+      "description": "You paralyze a humanoid, rendering them unable to move or act.",
+      "type": "utility",
+      "effect": {
+        "attribute": "dexterity",
+        "modifier": "paralyzed",
+        "duration": 10
+      },
+      "save": "wisdom",
+      "dc": 15,
+      "targeting": "single"
+    },
+    {
+      "name": "Invisibility",
+      "description": "You or a creature you touch becomes invisible until the spell ends or they attack.",
+      "type": "buff",
+      "effect": {
+        "attribute": "visibility",
+        "modifier": "invisible",
+        "duration": 10
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    },
+    {
+      "name": "Hold Monster",
+      "description": "You paralyze a creature, regardless of type, rendering them immobile.",
+      "type": "utility",
+      "effect": {
+        "attribute": "dexterity",
+        "modifier": "paralyzed",
+        "duration": 1
+      },
+      "save": "wisdom",
+      "dc": 16,
+      "targeting": "single"
+    },
+    {
+      "name": "Flesh to Stone",
+      "description": "You attempt to turn a creature to stone, petrifying them over time.",
+      "type": "utility",
+      "effect": {
+        "attribute": "constitution",
+        "modifier": "petrified",
+        "duration": 0
+      },
+      "save": "constitution",
+      "dc": 17,
+      "targeting": "single"
+    },
+    {
+      "name": "Poison Spray",
+      "description": "You extend your hand and project a puff of noxious gas at a creature.",
+      "type": "damage",
+      "damage": "2d12",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": "constitution",
+      "dc": 13,
+      "targeting": "single"
+    },
+    {
+      "name": "Earth Tremor",
+      "description": "You cause a tremor in the ground, knocking creatures prone and dealing damage.",
+      "type": "damage",
+      "damage": "1d6",
+      "effect": {
+        "attribute": "dexterity",
+        "modifier": "prone",
+        "duration": 1
+      },
+      "save": "dexterity",
+      "dc": 12,
+      "targeting": "aoe"
+    },
+    {
+      "name": "Entangle",
+      "description": "Grasping weeds and vines sprout, restraining creatures in an area.",
+      "type": "utility",
+      "effect": {
+        "attribute": "dexterity",
+        "modifier": "restrained",
+        "duration": 1
+      },
+      "save": "strength",
+      "dc": 13,
+      "targeting": "aoe"
+    },
+    {
+      "name": "Stunning Strike",
+      "description": "You strike a creature with force, attempting to stun them momentarily.",
+      "type": "utility",
+      "effect": {
+        "attribute": "constitution",
+        "modifier": "stunned",
+        "duration": 1
+      },
+      "save": "constitution",
+      "dc": 14,
+      "targeting": "single"
+    },
+    {
+      "name": "Sleep",
+      "description": "You send creatures into a magical slumber, rendering them unconscious.",
+      "type": "utility",
+      "effect": {
+        "attribute": "health",
+        "modifier": "unconscious",
+        "duration": 1
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "aoe"
+    }
+  ],
+  "conditions": {}
+}

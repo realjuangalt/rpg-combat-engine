@@ -1,0 +1,13 @@
+{
+  "name": "Sleep",
+  "description": "You send creatures into a magical slumber, rendering them unconscious.",
+  "type": "utility",
+  "effect": {
+    "attribute": "health",
+    "modifier": "unconscious",
+    "duration": 1
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "aoe"
+}

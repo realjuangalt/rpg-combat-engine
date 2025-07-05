@@ -1,0 +1,13 @@
+{
+  "name": "Charm Person",
+  "description": "You attempt to charm a humanoid, making them regard you as a friendly acquaintance.",
+  "type": "utility",
+  "effect": {
+    "attribute": "charisma",
+    "modifier": "charmed",
+    "duration": 10
+  },
+  "save": "wisdom",
+  "dc": 13,
+  "targeting": "single"
+}

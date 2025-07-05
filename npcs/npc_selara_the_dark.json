@@ -1,0 +1,67 @@
+{
+  "name": "Selara the Dark",
+  "description": "A cunning warlock with piercing eyes, cloaked in shadows, drawing power from an otherworldly patron.",
+  "hp": 40,
+  "ac": 13,
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 12,
+  "intelligence": 14,
+  "wisdom": 12,
+  "charisma": 16,
+  "class_type": "warlock",
+  "damage": "1d10",
+  "inventory": [
+    {
+      "name": "Eldritch Blast",
+      "description": "A beam of crackling energy streaks toward a creature, fueled by otherworldly magic.",
+      "type": "magic",
+      "damage": "1d10",
+      "finesse": false,
+      "versatile": false,
+      "mod": "charisma"
+    },
+    {
+      "name": "Dagger",
+      "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+      "type": "melee",
+      "damage": "1d4",
+      "finesse": true,
+      "versatile": {
+        "one_hand": "1d4",
+        "two_hands": null
+      },
+      "mod": "dexterity"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Hex",
+      "description": "You curse a creature, causing them to take extra damage and suffer disadvantage on ability checks.",
+      "type": "debuff",
+      "effect": {
+        "attribute": "adv_disadv",
+        "modifier": "disadvantage",
+        "duration": 1
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "single"
+    },
+    {
+      "name": "Hellish Rebuke",
+      "description": "You point at a creature that damaged you, surrounding them with hellish flames.",
+      "type": "damage",
+      "damage": "2d10",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": "dexterity",
+      "dc": 14,
+      "targeting": "single"
+    }
+  ],
+  "conditions": {}
+}

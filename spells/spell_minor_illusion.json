@@ -1,0 +1,13 @@
+{
+  "name": "Minor Illusion",
+  "description": "You create a sound or image of an object that lasts for up to a minute, deceiving observers.",
+  "type": "utility",
+  "effect": {
+    "attribute": "visibility",
+    "modifier": "disadvantage",
+    "duration": 2
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Dagger",
+  "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+  "type": "melee",
+  "damage": "1d4",
+  "finesse": true,
+  "versatile": {
+    "one_hand": "1d4",
+    "two_hands": null
+  },
+  "mod": "dexterity"
+}

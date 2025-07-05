@@ -1,0 +1,9 @@
+{
+  "name": "Club",
+  "description": "A heavy, crude weapon used to bludgeon foes into submission.",
+  "type": "melee",
+  "damage": "1d10",
+  "finesse": false,
+  "versatile": false,
+  "mod": "strength"
+}

@@ -1,626 +1,884 @@
 {
-    "players": [
-{
-  "name": "Jarvis",
-  "hp": 10,
-  "ac": 12,
-  "strength": 8,
-  "dexterity": 14,
-  "constitution": 10,
-  "intelligence": 18,
-  "wisdom": 12,
-  "charisma": 16,
-  "class_type": "wizard",
-  "damage": "1d6",
-  "inventory": [
+  "players": [
     {
-      "name": "Quarterstaff",
-      "type": "melee",
+      "name": "Emolas",
+      "description": "",
+      "hp": 45,
+      "ac": 15,
+      "strength": 12,
+      "dexterity": 16,
+      "constitution": 13,
+      "intelligence": 14,
+      "wisdom": 10,
+      "charisma": 15,
+      "class_type": "rogue",
       "damage": "1d6",
-      "finesse": false,
-      "versatile": {
-        "one_hand": "1d6",
-        "two_hands": "1d8"
-      },
-      "mod": "strength"
+      "inventory": [
+        {
+          "name": "Khan's Shortbow",
+          "description": "A finely crafted shortbow, engraved with runes of an ancient archer lord, granting enhanced precision and power.",
+          "type": "ranged",
+          "damage": "3d6",
+          "finesse": false,
+          "versatile": false,
+          "mod": "dexterity"
+        },
+        {
+          "name": "Dagger",
+          "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+          "type": "melee",
+          "damage": "1d4",
+          "finesse": true,
+          "versatile": false,
+          "mod": "dexterity"
+        },
+        {
+          "name": "Moonlight Katana",
+          "description": "A sleek, magical blade that gleams faintly under moonlight, imbued with enchantments for swift and deadly strikes.",
+          "type": "melee",
+          "damage": "1d8+3",
+          "finesse": true,
+          "versatile": false,
+          "mod": "dexterity"
+        },
+        {
+          "name": "Shortsword",
+          "description": "A lightweight, versatile blade, perfect for quick slashes and thrusts.",
+          "type": "melee",
+          "damage": "1d6",
+          "finesse": true,
+          "versatile": false,
+          "mod": "dexterity"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Sonic Disintegration",
+          "description": "You unleash a blast of sonic energy that tears through a target, potentially shattering stone structures.",
+          "type": "damage",
+          "damage": "2d10+2",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Fortune's Favor",
+          "description": "You grant a creature a spark of luck, allowing them to excel in their next endeavor.",
+          "type": "buff",
+          "effect": {
+            "attribute": "adv_disadv",
+            "modifier": "advantage",
+            "duration": 4
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Curse of Misfortune",
+          "description": "You curse a creature with ill luck, hindering their actions.",
+          "type": "debuff",
+          "effect": {
+            "attribute": "adv_disadv",
+            "modifier": "disadvantage",
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Dancing Lights",
+          "description": "You create up to four torch-sized lights that hover and move at your command, illuminating an area.",
+          "type": "utility",
+          "effect": {
+            "attribute": "visibility",
+            "modifier": "bright",
+            "duration": 10
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        },
+        {
+          "name": "Faerie Fire",
+          "description": "Each object in a 20-foot cube is outlined in light, granting advantage on attack rolls against affected creatures.",
+          "type": "utility",
+          "effect": {
+            "attribute": "visibility",
+            "modifier": "advantage on attacks",
+            "duration": 10
+          },
+          "save": "dexterity",
+          "dc": 14,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Minor Illusion",
+          "description": "You create a sound or image of an object that lasts for up to a minute, deceiving observers.",
+          "type": "utility",
+          "effect": {
+            "attribute": "visibility",
+            "modifier": "disadvantage",
+            "duration": 2
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        },
+        {
+          "name": "Stealthy Concealment",
+          "description": "You weave shadows around yourself, making it harder for enemies to land a hit.",
+          "type": "buff",
+          "effect": {
+            "attribute": "ac",
+            "modifier": "disadvantage",
+            "duration": 2
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        },
+        {
+          "name": "Sneak Attack",
+          "description": "You exploit a foe’s distraction to deal extra damage with a precise strike.",
+          "type": "damage",
+          "damage": "2d6",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "dexterity",
+          "dc": 15,
+          "targeting": "single"
+        },
+        {
+          "name": "Expertise",
+          "description": "You tap into your honed skills, gaining an edge in specific tasks.",
+          "type": "buff",
+          "effect": {
+            "attribute": "adv_disadv",
+            "modifier": "advantage",
+            "duration": 4
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        },
+        {
+          "name": "Cunning Action",
+          "description": "Your agility allows you to take a bonus action to dash, disengage, or hide.",
+          "type": "utility",
+          "effect": {
+            "attribute": "speed",
+            "modifier": "bonus action",
+            "duration": 1
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        }
+      ],
+      "conditions": {}
     },
     {
-      "name": "Dagger",
-      "type": "melee",
+      "name": "Gandalf",
+      "description": "A wise and powerful wizard, clad in grey robes, wielding ancient magic and a staff of great power.",
+      "hp": 40,
+      "ac": 12,
+      "strength": 10,
+      "dexterity": 12,
+      "constitution": 14,
+      "intelligence": 18,
+      "wisdom": 16,
+      "charisma": 15,
+      "class_type": "wizard",
+      "damage": "1d8",
+      "inventory": [
+        {
+          "name": "Staff of Power",
+          "description": "A gnarled wooden staff imbued with arcane energy, capable of channeling powerful spells.",
+          "type": "magic",
+          "damage": "1d8",
+          "finesse": false,
+          "versatile": false,
+          "mod": "intelligence"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Cure Wounds",
+          "description": "A creature you touch regains a number of hit points, healing minor wounds.",
+          "type": "healing",
+          "healing": "1d8+3",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Magic Missile",
+          "description": "You create three glowing darts of magical force that unerringly strike their targets.",
+          "type": "damage",
+          "damage": "3d4+3",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Fireball",
+          "description": "A bright streak flashes to a point and detonates, engulfing the area in flames.",
+          "type": "damage",
+          "damage": "8d6",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "dexterity",
+          "dc": 16,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Lightning Bolt",
+          "description": "A stroke of lightning forms a line, dealing damage to creatures in its path.",
+          "type": "damage",
+          "damage": "8d6",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "dexterity",
+          "dc": 16,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Shield",
+          "description": "An invisible barrier of magical force protects you, increasing your AC temporarily.",
+          "type": "buff",
+          "effect": {
+            "attribute": "ac",
+            "modifier": 5,
+            "duration": 1
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        }
+      ],
+      "conditions": {}
+    },
+    {
+      "name": "Jarvis",
+      "description": "",
+      "hp": 40,
+      "ac": 12,
+      "strength": 8,
+      "dexterity": 14,
+      "constitution": 10,
+      "intelligence": 18,
+      "wisdom": 12,
+      "charisma": 16,
+      "class_type": "wizard",
+      "damage": "1d6",
+      "inventory": [
+        {
+          "name": "Quarterstaff",
+          "description": "A sturdy wooden staff, suitable for both combat and as a walking aid.",
+          "type": "melee",
+          "damage": "1d6",
+          "finesse": false,
+          "versatile": {
+            "one_hand": "1d6",
+            "two_hands": "1d8"
+          },
+          "mod": "strength"
+        },
+        {
+          "name": "Dagger",
+          "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+          "type": "melee",
+          "damage": "1d4",
+          "finesse": true,
+          "versatile": false,
+          "mod": "dexterity"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Magic Missile",
+          "description": "You create three glowing darts of magical force that unerringly strike their targets.",
+          "type": "damage",
+          "damage": "1d4+1",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Psychic Damage",
+          "description": "You assail a creature’s mind with psychic energy, causing mental anguish.",
+          "type": "damage",
+          "damage": "2d6",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "intelligence",
+          "dc": 15,
+          "targeting": "single"
+        },
+        {
+          "name": "Charm Person",
+          "description": "You attempt to charm a humanoid, making them regard you as a friendly acquaintance.",
+          "type": "utility",
+          "effect": {
+            "attribute": "charisma",
+            "modifier": "-1",
+            "duration": 1
+          },
+          "save": "wisdom",
+          "dc": 15,
+          "targeting": "single"
+        },
+        {
+          "name": "Suggestion",
+          "description": "You suggest a course of action to a creature, magically influencing their behavior.",
+          "type": "utility",
+          "effect": {
+            "attribute": "charisma",
+            "modifier": "+2",
+            "duration": 8
+          },
+          "save": "wisdom",
+          "dc": 15,
+          "targeting": "single"
+        },
+        {
+          "name": "Major Image",
+          "description": "You create an illusion of an object, creature, or scene, which seems completely real.",
+          "type": "utility",
+          "effect": {
+            "attribute": "intelligence",
+            "modifier": "+3",
+            "duration": 1
+          },
+          "save": "intelligence",
+          "dc": 18,
+          "targeting": "aoe"
+        }
+      ],
+      "conditions": {
+        "Invisible": 1
+      }
+    },
+    {
+      "name": "Zaryn the Enchanter",
+      "description": "",
+      "hp": 52,
+      "ac": 16,
+      "strength": 8,
+      "dexterity": 14,
+      "constitution": 14,
+      "intelligence": 12,
+      "wisdom": 10,
+      "charisma": 18,
+      "class_type": "sorcerer",
       "damage": "1d4",
-      "finesse": true,
-      "versatile": null,
-      "mod": "dexterity"
-    },
-    {
-      "name": "Component Pouch",
-      "type": "magic",
-      "damage": null,
-      "finesse": null,
-      "versatile": null,
-      "mod": null
+      "inventory": [
+        {
+          "name": "Dagger",
+          "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+          "type": "melee",
+          "damage": "1d4",
+          "finesse": true,
+          "versatile": {
+            "one_hand": "1d4",
+            "two_hands": null
+          },
+          "mod": "dexterity"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Blinding Light",
+          "description": "You conjure a burst of radiant light, temporarily blinding a creature.",
+          "type": "utility",
+          "effect": {
+            "attribute": "visibility",
+            "modifier": "blinded",
+            "duration": 2
+          },
+          "save": "constitution",
+          "dc": 14,
+          "targeting": "single"
+        },
+        {
+          "name": "Charm Person",
+          "description": "You attempt to charm a humanoid, making them regard you as a friendly acquaintance.",
+          "type": "utility",
+          "effect": {
+            "attribute": "charisma",
+            "modifier": "charmed",
+            "duration": 10
+          },
+          "save": "wisdom",
+          "dc": 13,
+          "targeting": "single"
+        },
+        {
+          "name": "Thunderclap",
+          "description": "You create a burst of thunderous sound, damaging and deafening nearby creatures.",
+          "type": "damage",
+          "damage": "2d6",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "constitution",
+          "dc": 15,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Cause Fear",
+          "description": "You instill overwhelming fear in a creature, causing them to flee or cower.",
+          "type": "utility",
+          "effect": {
+            "attribute": "wisdom",
+            "modifier": "frightened",
+            "duration": 1
+          },
+          "save": "wisdom",
+          "dc": 14,
+          "targeting": "single"
+        },
+        {
+          "name": "Grasping Vines",
+          "description": "Magical vines sprout from the ground, entangling a creature.",
+          "type": "utility",
+          "effect": {
+            "attribute": "dexterity",
+            "modifier": "grappled",
+            "duration": 1
+          },
+          "save": "strength",
+          "dc": 14,
+          "targeting": "single"
+        },
+        {
+          "name": "Hold Person",
+          "description": "You paralyze a humanoid, rendering them unable to move or act.",
+          "type": "utility",
+          "effect": {
+            "attribute": "dexterity",
+            "modifier": "paralyzed",
+            "duration": 10
+          },
+          "save": "wisdom",
+          "dc": 15,
+          "targeting": "single"
+        },
+        {
+          "name": "Invisibility",
+          "description": "You or a creature you touch becomes invisible until the spell ends or they attack.",
+          "type": "buff",
+          "effect": {
+            "attribute": "visibility",
+            "modifier": "invisible",
+            "duration": 10
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        },
+        {
+          "name": "Hold Monster",
+          "description": "You paralyze a creature, regardless of type, rendering them immobile.",
+          "type": "utility",
+          "effect": {
+            "attribute": "dexterity",
+            "modifier": "paralyzed",
+            "duration": 1
+          },
+          "save": "wisdom",
+          "dc": 16,
+          "targeting": "single"
+        },
+        {
+          "name": "Flesh to Stone",
+          "description": "You attempt to turn a creature to stone, petrifying them over time.",
+          "type": "utility",
+          "effect": {
+            "attribute": "constitution",
+            "modifier": "petrified",
+            "duration": 0
+          },
+          "save": "constitution",
+          "dc": 17,
+          "targeting": "single"
+        },
+        {
+          "name": "Poison Spray",
+          "description": "You extend your hand and project a puff of noxious gas at a creature.",
+          "type": "damage",
+          "damage": "2d12",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "constitution",
+          "dc": 13,
+          "targeting": "single"
+        },
+        {
+          "name": "Earth Tremor",
+          "description": "You cause a tremor in the ground, knocking creatures prone and dealing damage.",
+          "type": "damage",
+          "damage": "1d6",
+          "effect": {
+            "attribute": "dexterity",
+            "modifier": "prone",
+            "duration": 1
+          },
+          "save": "dexterity",
+          "dc": 12,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Entangle",
+          "description": "Grasping weeds and vines sprout, restraining creatures in an area.",
+          "type": "utility",
+          "effect": {
+            "attribute": "dexterity",
+            "modifier": "restrained",
+            "duration": 1
+          },
+          "save": "strength",
+          "dc": 13,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Stunning Strike",
+          "description": "You strike a creature with force, attempting to stun them momentarily.",
+          "type": "utility",
+          "effect": {
+            "attribute": "constitution",
+            "modifier": "stunned",
+            "duration": 1
+          },
+          "save": "constitution",
+          "dc": 14,
+          "targeting": "single"
+        },
+        {
+          "name": "Sleep",
+          "description": "You send creatures into a magical slumber, rendering them unconscious.",
+          "type": "utility",
+          "effect": {
+            "attribute": "health",
+            "modifier": "unconscious",
+            "duration": 1
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "aoe"
+        }
+      ],
+      "conditions": {}
     }
   ],
-  "spells": [
+  "npcs": [
     {
-      "name": "Magic Missile",
-      "type": "damage",
-      "damage": "1d4+1",
-      "healing": null,
-      "effect": null,
-      "save": null,
-      "dc": null,
-      "targeting": "single"
-    },
-    {
-      "name": "Psychic Damage",
-      "type": "damage",
+      "name": "Threx the Brutal",
+      "description": "A towering barbarian with scarred skin and a fierce glare, wielding a massive greataxe with deadly precision.",
+      "hp": 60,
+      "ac": 14,
+      "strength": 18,
+      "dexterity": 12,
+      "constitution": 16,
+      "intelligence": 8,
+      "wisdom": 10,
+      "charisma": 9,
+      "class_type": "barbarian",
       "damage": "2d6",
-      "healing": null,
-      "effect": null,
-      "save": "intelligence",
-      "dc": 15,
-      "targeting": "single"
+      "inventory": [
+        {
+          "name": "Greataxe",
+          "description": "A large, heavy axe designed for devastating two-handed strikes.",
+          "type": "melee",
+          "damage": "1d12",
+          "finesse": false,
+          "versatile": {
+            "one_hand": null,
+            "two_hands": "1d12"
+          },
+          "mod": "strength"
+        },
+        {
+          "name": "Handaxe",
+          "description": "A small axe that can be wielded or thrown with ease.",
+          "type": "melee",
+          "damage": "1d6",
+          "finesse": false,
+          "versatile": {
+            "one_hand": "1d6",
+            "two_hands": null
+          },
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {}
     },
     {
-      "name": "Charm Person",
-      "type": "utility",
-      "damage": null,
-      "healing": null,
-      "effect": {
-        "attribute": "charisma",
-        "modifier": "-1",
-        "duration": 1
-      },
-      "save": "wisdom",
-      "dc": 15,
-      "targeting": "single"
+      "name": "Selara the Dark",
+      "description": "A cunning warlock with piercing eyes, cloaked in shadows, drawing power from an otherworldly patron.",
+      "hp": 40,
+      "ac": 13,
+      "strength": 10,
+      "dexterity": 14,
+      "constitution": 12,
+      "intelligence": 14,
+      "wisdom": 12,
+      "charisma": 16,
+      "class_type": "warlock",
+      "damage": "1d10",
+      "inventory": [
+        {
+          "name": "Eldritch Blast",
+          "description": "A beam of crackling energy streaks toward a creature, fueled by otherworldly magic.",
+          "type": "magic",
+          "damage": "1d10",
+          "finesse": false,
+          "versatile": false,
+          "mod": "charisma"
+        },
+        {
+          "name": "Dagger",
+          "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+          "type": "melee",
+          "damage": "1d4",
+          "finesse": true,
+          "versatile": {
+            "one_hand": "1d4",
+            "two_hands": null
+          },
+          "mod": "dexterity"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Hex",
+          "description": "You curse a creature, causing them to take extra damage and suffer disadvantage on ability checks.",
+          "type": "debuff",
+          "effect": {
+            "attribute": "adv_disadv",
+            "modifier": "disadvantage",
+            "duration": 1
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Hellish Rebuke",
+          "description": "You point at a creature that damaged you, surrounding them with hellish flames.",
+          "type": "damage",
+          "damage": "2d10",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "dexterity",
+          "dc": 14,
+          "targeting": "single"
+        }
+      ],
+      "conditions": {}
     },
     {
-      "name": "Suggestion",
-      "type": "utility",
-      "damage": null,
-      "healing": null,
-      "effect": {
-        "attribute": "charisma",
-        "modifier": "+2",
-        "duration": 8
-      },
-      "save": "wisdom",
-      "dc": 15,
-      "targeting": "single"
+      "name": "Orc",
+      "description": "A brutish humanoid with green skin and tusks, driven by a thirst for battle.",
+      "hp": 15,
+      "ac": 13,
+      "strength": 14,
+      "dexterity": 12,
+      "constitution": 13,
+      "intelligence": 8,
+      "wisdom": 10,
+      "charisma": 6,
+      "class_type": "fighter",
+      "damage": "1d6",
+      "inventory": [
+        {
+          "name": "Greataxe",
+          "description": "A large, heavy axe designed for devastating two-handed strikes.",
+          "type": "melee",
+          "damage": "1d12",
+          "finesse": false,
+          "versatile": false,
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {}
     },
     {
-      "name": "Major Image",
-      "type": "utility",
-      "damage": null,
-      "healing": null,
-      "effect": {
-        "attribute": "intelligence",
-        "modifier": "+3",
-        "duration": 1
-      },
-      "save": "intelligence",
-      "dc": 18,
-      "targeting": "aoe"
+      "name": "Goblin",
+      "description": "A small, sneaky creature with sharp teeth and a penchant for ambushes.",
+      "hp": 12,
+      "ac": 15,
+      "strength": 10,
+      "dexterity": 14,
+      "constitution": 10,
+      "intelligence": 8,
+      "wisdom": 8,
+      "charisma": 8,
+      "class_type": "fighter",
+      "damage": "1d6",
+      "inventory": [
+        {
+          "name": "Scimitar",
+          "description": "A curved blade designed for slashing attacks, favored by agile fighters.",
+          "type": "melee",
+          "damage": "1d6",
+          "finesse": true,
+          "versatile": false,
+          "mod": "dexterity"
+        },
+        {
+          "name": "Shortbow",
+          "description": "A small bow, easy to wield, used for ranged attacks.",
+          "type": "ranged",
+          "damage": "1d6",
+          "finesse": false,
+          "versatile": false,
+          "mod": "dexterity"
+        }
+      ],
+      "spells": [],
+      "conditions": {}
+    },
+    {
+      "name": "Troll",
+      "description": "A massive, lumbering creature with regenerative flesh and a ravenous appetite.",
+      "hp": 30,
+      "ac": 13,
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 16,
+      "intelligence": 7,
+      "wisdom": 9,
+      "charisma": 6,
+      "class_type": "barbarian",
+      "damage": "1d10",
+      "inventory": [
+        {
+          "name": "Club",
+          "description": "A heavy, crude weapon used to bludgeon foes into submission.",
+          "type": "melee",
+          "damage": "1d10",
+          "finesse": false,
+          "versatile": false,
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {}
+    },
+    {
+      "name": "Goblin Witch",
+      "description": "A crafty goblin sorcerer, wielding dark magic and a twisted staff, feared by her kin.",
+      "hp": 18,
+      "ac": 12,
+      "strength": 8,
+      "dexterity": 14,
+      "constitution": 10,
+      "intelligence": 14,
+      "wisdom": 12,
+      "charisma": 10,
+      "class_type": "sorcerer",
+      "damage": "1d4",
+      "inventory": [
+        {
+          "name": "Magic Staff",
+          "description": "A twisted wooden staff, pulsing with arcane energy, used to channel spells.",
+          "type": "magic",
+          "damage": "1d4",
+          "finesse": false,
+          "versatile": false,
+          "mod": "intelligence"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Magic Missile",
+          "description": "You create three glowing darts of magical force that unerringly strike their targets.",
+          "type": "damage",
+          "damage": "3d4+3",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Burning Hands",
+          "description": "A thin sheet of flames shoots from your hands, burning creatures in a cone.",
+          "type": "damage",
+          "damage": "3d6",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": "dexterity",
+          "dc": 13,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Cure Wounds",
+          "description": "A creature you touch regains a number of hit points, healing minor wounds.",
+          "type": "healing",
+          "healing": "1d8+3",
+          "effect": {
+            "attribute": "none",
+            "modifier": "none",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "self"
+        }
+      ],
+      "conditions": {}
     }
-  ],
-  "conditions": {
-    "Invisible": 1
-  }
-},
-        {
-            "name": "Zaryn the Enchanter",
-            "hp": 52,
-            "ac": 16,
-            "strength": 8,
-            "dexterity": 14,
-            "constitution": 14,
-            "intelligence": 12,
-            "wisdom": 10,
-            "charisma": 18,
-            "class_type": "sorcerer",
-            "damage": "1d4",
-            "inventory": [
-                {
-                    "name": "Dagger",
-                    "type": "melee",
-                    "damage": "1d4",
-                    "finesse": true,
-                    "versatile": {
-                        "one_hand": "1d4",
-                        "two_hands": null
-                    },
-                    "mod": "dexterity"
-                }
-            ],
-            "spells": [
-                {
-                    "name": "Blinding Light",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "vision",
-                      "modifier": "blinded",
-                      "duration": 2
-                    },
-                    "save": "constitution",
-                    "dc": 14,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Charm Person",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "attitude",
-                      "modifier": "charmed",
-                      "duration": 10
-                    },
-                    "save": "wisdom",
-                    "dc": 13,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Thunderclap",
-                    "type": "damage",
-                    "damage": "2d6",
-                    "effect": {
-                      "attribute": "hearing",
-                      "modifier": "deafened",
-                      "duration": 1
-                    },
-                    "save": "constitution",
-                    "dc": 15,
-                    "targeting": "aoe"
-                  },
-                  {
-                    "name": "Cause Fear",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "courage",
-                      "modifier": "frightened",
-                      "duration": 1
-                    },
-                    "save": "wisdom",
-                    "dc": 14,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Grasping Vines",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "movement",
-                      "modifier": "grappled",
-                      "duration": 1
-                    },
-                    "save": "strength",
-                    "dc": 14,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Hold Person",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "actions",
-                      "modifier": "incapacitated",
-                      "duration": 10
-                    },
-                    "save": "wisdom",
-                    "dc": 15,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Invisibility",
-                    "type": "buff",
-                    "effect": {
-                      "attribute": "visibility",
-                      "modifier": "invisible",
-                      "duration": 10
-                    },
-                    "targeting": "self"
-                  },
-                  {
-                    "name": "Hold Monster",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "movement",
-                      "modifier": "paralyzed",
-                      "duration": 1
-                    },
-                    "save": "wisdom",
-                    "dc": 16,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Flesh to Stone",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "mobility",
-                      "modifier": "petrified",
-                      "duration": "permanent"
-                    },
-                    "save": "constitution",
-                    "dc": 17,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Poison Spray",
-                    "type": "damage",
-                    "damage": "2d12",
-                    "effect": {
-                      "attribute": "health",
-                      "modifier": "poisoned",
-                      "duration": 1
-                    },
-                    "save": "constitution",
-                    "dc": 13,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Earth Tremor",
-                    "type": "damage",
-                    "damage": "1d6",
-                    "effect": {
-                      "attribute": "position",
-                      "modifier": "prone",
-                      "duration": 1
-                    },
-                    "save": "dexterity",
-                    "dc": 12,
-                    "targeting": "aoe"
-                  },
-                  {
-                    "name": "Entangle",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "movement",
-                      "modifier": "restrained",
-                      "duration": 1
-                    },
-                    "save": "strength",
-                    "dc": 13,
-                    "targeting": "aoe"
-                  },
-                  {
-                    "name": "Stunning Strike",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "actions",
-                      "modifier": "stunned",
-                      "duration": 1
-                    },
-                    "save": "constitution",
-                    "dc": 14,
-                    "targeting": "single"
-                  },
-                  {
-                    "name": "Sleep",
-                    "type": "utility",
-                    "effect": {
-                      "attribute": "actions",
-                      "modifier": "unconscious",
-                      "duration": 1
-                    },
-                    "save": "none",
-                    "targeting": "aoe"
-                  }              
-
-            ],
-            "conditions": {}
-        },
-        {
-            "name": "Emolas",
-            "hp": 45,
-            "ac": 15,
-            "strength": 12,
-            "dexterity": 16,
-            "constitution": 13,
-            "intelligence": 14,
-            "wisdom": 10,
-            "charisma": 15,
-            "class_type": "rogue",
-            "damage": "1d6",
-            "inventory": [
-                {
-                    "name": "Khan's Shortbow",
-                    "type": "ranged",
-                    "damage": "3d6",
-                    "finesse": false,
-                    "versatile": false,
-                    "mod": "dexterity"
-                },
-                {
-                    "name": "Dagger",
-                    "type": "melee",
-                    "damage": "1d4",
-                    "finesse": true,
-                    "mod": "dexterity"
-                },
-                {
-                    "name": "Shortsword",
-                    "type": "melee",
-                    "damage": "1d6",
-                    "finesse": true,
-                    "mod": "dexterity"
-                }
-            ],
-            "spells": [
-                {
-                    "name": "Fortune's Favor",
-                    "type": "buff",
-                    "effect": {
-                        "attribute": "adv_disadv",
-                        "modifier": "advantage",
-                        "duration": 4
-                    },
-                    "targeting": "single"
-                },
-                {
-                    "name": "Curse of Misfortune",
-                    "type": "debuff",
-                    "effect": {
-                        "attribute": "adv_disadv",
-                        "modifier": "disadvantage",
-                        "duration": 3
-                    },
-                    "targeting": "single"
-                },                
-                {
-                    "name": "Dancing Lights",
-                    "type": "utility",
-                    "effect": {
-                        "attribute": "light",
-                        "modifier": "bright",
-                        "duration": 10
-                    },
-                    "save": null,
-                    "dc": null,
-                    "targeting": "self"
-                },
-                {
-                    "name": "Faerie Fire",
-                    "type": "utility",
-                    "effect": {
-                        "attribute": "visibility",
-                        "modifier": "advantage on attacks",
-                        "duration": 10
-                    },
-                    "save": "dexterity",
-                    "dc": 14,
-                    "targeting": "aoe"
-                }
-            ],
-            "conditions": {}
-        }
-    ],
-    "npcs": [
-        {
-            "name": "Threx the Brutal",
-            "hp": 60,
-            "ac": 14,
-            "strength": 18,
-            "dexterity": 12,
-            "constitution": 16,
-            "intelligence": 8,
-            "wisdom": 10,
-            "charisma": 9,
-            "class_type": "barbarian",
-            "damage": "2d6",
-            "inventory": [
-                {
-                    "name": "Greataxe",
-                    "type": "melee",
-                    "damage": "1d12",
-                    "finesse": false,
-                    "versatile": {
-                        "one_hand": null,
-                        "two_hands": "1d12"
-                    },
-                    "mod": "strength"
-                },
-                {
-                    "name": "Handaxe",
-                    "type": "melee",
-                    "damage": "1d6",
-                    "finesse": false,
-                    "versatile": {
-                        "one_hand": "1d6",
-                        "two_hands": null
-                    },
-                    "mod": "strength"
-                }
-            ],
-            "spells": [],
-            "conditions": {}
-        },
-        {
-            "name": "Selara the Dark",
-            "hp": 40,
-            "ac": 13,
-            "strength": 10,
-            "dexterity": 14,
-            "constitution": 12,
-            "intelligence": 14,
-            "wisdom": 12,
-            "charisma": 16,
-            "class_type": "warlock",
-            "damage": "1d10",
-            "inventory": [
-                {
-                    "name": "Eldritch Blast",
-                    "type": "magic",
-                    "damage": "1d10",
-                    "finesse": false,
-                    "versatile": {
-                        "one_hand": null,
-                        "two_hands": null
-                    },
-                    "mod": "charisma"
-                },
-                {
-                    "name": "Dagger",
-                    "type": "melee",
-                    "damage": "1d4",
-                    "finesse": true,
-                    "versatile": {
-                        "one_hand": "1d4",
-                        "two_hands": null
-                    },
-                    "mod": "dexterity"
-                }
-            ],
-            "spells": [
-                {
-                    "name": "Hex",
-                    "type": "condition",
-                    "effect": {
-                        "attribute": "disadvantage",
-                        "modifier": 0,
-                        "duration": 1
-                    },
-                    "save": null,
-                    "dc": null,
-                    "targeting": "single"
-                },
-                {
-                    "name": "Hellish Rebuke",
-                    "type": "damage",
-                    "damage": "2d10",
-                    "effect": {
-                        "attribute": "fire",
-                        "modifier": 0,
-                        "duration": null
-                    },
-                    "save": "dexterity",
-                    "dc": 14,
-                    "targeting": "single"
-                }
-            ],
-            "conditions": {}
-        },                
-        {
-            "name": "Orc",
-            "hp": 15,
-            "ac": 13,
-            "strength": 14,
-            "dexterity": 12,
-            "constitution": 13,
-            "intelligence": 8,
-            "wisdom": 10,
-            "charisma": 6,
-            "class_type": "fighter",
-            "damage": "1d6",
-            "inventory": [
-                {
-                    "name": "Greataxe",
-                    "type": "melee",
-                    "damage": "1d12",
-                    "finesse": false,
-                    "mod": "strength"
-                }
-            ],
-            "conditions": {}
-        },
-        {
-            "name": "Goblin",
-            "hp": 12,
-            "ac": 15,
-            "strength": 10,
-            "dexterity": 14,
-            "constitution": 10,
-            "intelligence": 8,
-            "wisdom": 8,
-            "charisma": 8,
-            "class_type": "fighter",
-            "damage": "1d6",
-            "inventory": [
-                {
-                    "name": "Scimitar",
-                    "type": "melee",
-                    "damage": "1d6",
-                    "finesse": true,
-                    "mod": "dexterity"
-                },
-                {
-                    "name": "Shortbow",
-                    "type": "ranged",
-                    "damage": "1d6",
-                    "finesse": false,
-                    "mod": "dexterity"
-                }
-            ],
-            "conditions": {}
-        },
-        {
-            "name": "Troll",
-            "hp": 30,
-            "ac": 13,
-            "strength": 18,
-            "dexterity": 10,
-            "constitution": 16,
-            "intelligence": 7,
-            "wisdom": 9,
-            "charisma": 6,
-            "class_type": "barbarian",
-            "damage": "1d10",
-            "inventory": [
-                {
-                    "name": "Club",
-                    "type": "melee",
-                    "damage": "1d10",
-                    "finesse": false,
-                    "mod": "strength"
-                }
-            ],
-            "conditions": {}
-        },
-        {
-            "name": "Goblin Witch",
-            "hp": 18,
-            "ac": 12,
-            "strength": 8,
-            "dexterity": 14,
-            "constitution": 10,
-            "intelligence": 14,
-            "wisdom": 12,
-            "charisma": 10,
-            "class_type": "sorcerer",
-            "damage": "1d4",
-            "inventory": [
-                {
-                    "name": "Magic Staff",
-                    "type": "magic",
-                    "damage": "1d4",
-                    "finesse": false,
-                    "mod": "intelligence"
-                }
-            ],
-            "spells": [
-                {
-                    "name": "Magic Missile",
-                    "type": "damage",
-                    "damage": "3d4+3",
-                    "save": null,
-                    "dc": null,
-                    "targeting": "single"
-                },
-                {
-                    "name": "Burning Hands",
-                    "type": "damage",
-                    "damage": "3d6",
-                    "save": "dexterity",
-                    "dc": 13,
-                    "targeting": "aoe"
-                },
-                {
-                    "name": "Cure Wounds",
-                    "type": "healing",
-                    "healing": "1d8+3",
-                    "save": null,
-                    "dc": null,
-                    "targeting": "self"
-                }
-            ],
-            "conditions": {}
-        }
-    ]
+  ]
 }

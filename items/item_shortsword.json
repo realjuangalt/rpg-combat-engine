@@ -1,0 +1,9 @@
+{
+  "name": "Shortsword",
+  "description": "A lightweight, versatile blade, perfect for quick slashes and thrusts.",
+  "type": "melee",
+  "damage": "1d6",
+  "finesse": true,
+  "versatile": false,
+  "mod": "dexterity"
+}

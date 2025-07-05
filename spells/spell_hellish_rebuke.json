@@ -1,0 +1,14 @@
+{
+  "name": "Hellish Rebuke",
+  "description": "You point at a creature that damaged you, surrounding them with hellish flames.",
+  "type": "damage",
+  "damage": "2d10",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "dexterity",
+  "dc": 14,
+  "targeting": "single"
+}

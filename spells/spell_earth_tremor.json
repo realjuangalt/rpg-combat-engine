@@ -1,0 +1,14 @@
+{
+  "name": "Earth Tremor",
+  "description": "You cause a tremor in the ground, knocking creatures prone and dealing damage.",
+  "type": "damage",
+  "damage": "1d6",
+  "effect": {
+    "attribute": "dexterity",
+    "modifier": "prone",
+    "duration": 1
+  },
+  "save": "dexterity",
+  "dc": 12,
+  "targeting": "aoe"
+}

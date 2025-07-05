@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "D&D 5e Game State Schema",
+  "description": "A schema defining the structure for D&D 5e game state data, including players, NPCs, inventory, spells, and conditions. Updated to ensure validation refresh.",
+  "type": "object",
+  "properties": {
+    "players": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "hp", "ac", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "class_type"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string", "maxLength": 500 },
+          "hp": { "type": "integer" },
+          "ac": { "type": "integer" },
+          "strength": { "type": "integer" },
+          "dexterity": { "type": "integer" },
+          "constitution": { "type": "integer" },
+          "intelligence": { "type": "integer" },
+          "wisdom": { "type": "integer" },
+          "charisma": { "type": "integer" },
+          "class_type": { "type": "string", "enum": ["wizard", "sorcerer", "fighter", "rogue", "cleric", "barbarian", "paladin", "ranger", "druid", "monk", "warlock", "bard"] },
+          "damage": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+          "inventory": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "type"],
+              "properties": {
+                "name": { "type": "string" },
+                "description": { "type": "string", "maxLength": 500 },
+                "type": { "type": "string", "enum": ["melee", "ranged", "magic", "armor", "potion", "scroll", "misc"] },
+                "damage": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+                "finesse": { "type": "boolean" },
+                "versatile": {
+                  "type": ["object", "boolean"],
+                  "properties": {
+                    "one_hand": { "type": ["string", "null"], "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+                    "two_hands": { "type": ["string", "null"], "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" }
+                  }
+                },
+                "mod": { "type": "string", "enum": ["strength", "dexterity", "intelligence", "wisdom", "charisma", "constitution"] }
+              }
+            }
+          },
+          "spells": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "type", "targeting"],
+              "properties": {
+                "name": { "type": "string" },
+                "description": { "type": "string", "maxLength": 500 },
+                "type": { "type": "string", "enum": ["damage", "healing", "buff", "debuff", "utility"] },
+                "damage": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+                "healing": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+                "effect": {
+                  "type": "object",
+                  "required": ["attribute", "modifier", "duration"],
+                  "properties": {
+                    "attribute": { "type": "string", "enum": ["ac", "health", "visibility", "speed", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "adv_disadv", "none"] },
+                    "modifier": {
+                      "type": ["integer", "string"],
+                      "description": "Temporary simplification to allow any string or integer due to jsonschema validation issues with conditional logic. Constraints for adv_disadv and none to be revisited."
+                    },
+                    "duration": { "type": "integer", "minimum": 0 }
+                  }
+                },
+                "save": { "type": ["string", "null"], "enum": ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "", null] },
+                "dc": { "type": ["integer", "null"], "minimum": 0 },
+                "targeting": { "type": "string", "enum": ["single", "aoe", "self"] }
+              }
+            }
+          },
+          "conditions": {
+            "type": "object",
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "npcs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "hp", "ac", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "class_type"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string", "maxLength": 500 },
+          "hp": { "type": "integer" },
+          "ac": { "type": "integer" },
+          "strength": { "type": "integer" },
+          "dexterity": { "type": "integer" },
+          "constitution": { "type": "integer" },
+          "intelligence": { "type": "integer" },
+          "wisdom": { "type": "integer" },
+          "charisma": { "type": "integer" },
+          "class_type": { "type": "string", "enum": ["wizard", "fighter", "sorcerer", "rogue", "cleric", "barbarian", "paladin", "ranger", "druid", "monk", "warlock", "bard", "monster", "beast"] },
+          "damage": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+          "inventory": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "type"],
+              "properties": {
+                "name": { "type": "string" },
+                "description": { "type": "string", "maxLength": 500 },
+                "type": { "type": "string", "enum": ["melee", "ranged", "magic", "armor", "potion", "scroll", "misc"] },
+                "damage": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+                "finesse": { "type": "boolean" },
+                "mod": { "type": "string", "enum": ["strength", "dexterity", "intelligence", "wisdom", "charisma", "constitution"] }
+              }
+            }
+          },
+          "spells": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name", "type", "targeting"],
+              "properties": {
+                "name": { "type": "string" },
+                "description": { "type": "string", "maxLength": 500 },
+                "type": { "type": "string", "enum": ["damage", "healing", "buff", "debuff", "utility"] },
+                "damage": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+                "healing": { "type": "string", "pattern": "^\\d+d\\d+(\\s*\\+\\s*\\d+)?$" },
+                "effect": {
+                  "type": "object",
+                  "required": ["attribute", "modifier", "duration"],
+                  "properties": {
+                    "attribute": { "type": "string", "enum": ["ac", "health", "visibility", "speed", "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "adv_disadv", "none"] },
+                    "modifier": {
+                      "type": ["integer", "string"],
+                      "description": "Temporary simplification to allow any string or integer due to jsonschema validation issues with conditional logic. Constraints for adv_disadv and none to be revisited."
+                    },
+                    "duration": { "type": "integer", "minimum": 0 }
+                  }
+                },
+                "save": { "type": ["string", "null"], "enum": ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma", "", null] },
+                "dc": { "type": ["integer", "null"], "minimum": 0 },
+                "targeting": { "type": "string", "enum": ["single", "aoe", "self"] }
+              }
+            }
+          },
+          "conditions": {
+            "type": "object",
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    }
+  },
+  "required": ["players", "npcs"]
+}

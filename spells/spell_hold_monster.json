@@ -1,0 +1,13 @@
+{
+  "name": "Hold Monster",
+  "description": "You paralyze a creature, regardless of type, rendering them immobile.",
+  "type": "utility",
+  "effect": {
+    "attribute": "dexterity",
+    "modifier": "paralyzed",
+    "duration": 1
+  },
+  "save": "wisdom",
+  "dc": 16,
+  "targeting": "single"
+}

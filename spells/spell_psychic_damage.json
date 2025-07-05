@@ -1,0 +1,14 @@
+{
+  "name": "Psychic Damage",
+  "description": "You assail a creature\u2019s mind with psychic energy, causing mental anguish.",
+  "type": "damage",
+  "damage": "2d6",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "intelligence",
+  "dc": 15,
+  "targeting": "single"
+}

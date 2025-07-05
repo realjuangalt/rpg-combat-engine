@@ -1,0 +1,14 @@
+{
+  "name": "Poison Spray",
+  "description": "You extend your hand and project a puff of noxious gas at a creature.",
+  "type": "damage",
+  "damage": "2d12",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "constitution",
+  "dc": 13,
+  "targeting": "single"
+}

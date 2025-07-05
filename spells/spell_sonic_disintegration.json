@@ -1,0 +1,14 @@
+{
+  "name": "Sonic Disintegration",
+  "description": "You unleash a blast of sonic energy that tears through a target, potentially shattering stone structures.",
+  "type": "damage",
+  "damage": "2d10+2",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "single"
+}

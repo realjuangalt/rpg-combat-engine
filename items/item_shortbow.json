@@ -1,0 +1,9 @@
+{
+  "name": "Shortbow",
+  "description": "A small bow, easy to wield, used for ranged attacks.",
+  "type": "ranged",
+  "damage": "1d6",
+  "finesse": false,
+  "versatile": false,
+  "mod": "dexterity"
+}

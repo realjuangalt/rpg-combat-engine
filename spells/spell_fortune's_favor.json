@@ -1,0 +1,13 @@
+{
+  "name": "Fortune's Favor",
+  "description": "You grant a creature a spark of luck, allowing them to excel in their next endeavor.",
+  "type": "buff",
+  "effect": {
+    "attribute": "adv_disadv",
+    "modifier": "advantage",
+    "duration": 4
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "single"
+}

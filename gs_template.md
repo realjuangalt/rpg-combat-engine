@@ -33,7 +33,7 @@
                     "healing": "string",  // e.g., "1d8+3" (optional)
                     "effect": {
                         "attribute": "string",  // e.g., "ac", "health", "visibility"
-                        "modifier": "integer or string",  // e.g., +5, "bright"
+                        "modifier": "integer or string",  // e.g., 5, "+5", "bright"
                         "duration": "integer"  // in rounds
                     },
                     "save": "string",  // e.g., "dexterity" (optional)

@@ -1,0 +1,13 @@
+{
+  "name": "Grasping Vines",
+  "description": "Magical vines sprout from the ground, entangling a creature.",
+  "type": "utility",
+  "effect": {
+    "attribute": "dexterity",
+    "modifier": "grappled",
+    "duration": 1
+  },
+  "save": "strength",
+  "dc": 14,
+  "targeting": "single"
+}

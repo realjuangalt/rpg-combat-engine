@@ -1,0 +1,13 @@
+{
+  "name": "Cause Fear",
+  "description": "You instill overwhelming fear in a creature, causing them to flee or cower.",
+  "type": "utility",
+  "effect": {
+    "attribute": "wisdom",
+    "modifier": "frightened",
+    "duration": 1
+  },
+  "save": "wisdom",
+  "dc": 14,
+  "targeting": "single"
+}

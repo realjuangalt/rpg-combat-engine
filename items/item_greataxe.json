@@ -1,0 +1,9 @@
+{
+  "name": "Greataxe",
+  "description": "A large, heavy axe designed for devastating two-handed strikes.",
+  "type": "melee",
+  "damage": "1d12",
+  "finesse": false,
+  "versatile": false,
+  "mod": "strength"
+}

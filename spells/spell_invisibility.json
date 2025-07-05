@@ -1,0 +1,13 @@
+{
+  "name": "Invisibility",
+  "description": "You or a creature you touch becomes invisible until the spell ends or they attack.",
+  "type": "buff",
+  "effect": {
+    "attribute": "visibility",
+    "modifier": "invisible",
+    "duration": 10
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

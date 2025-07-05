@@ -1,0 +1,13 @@
+{
+  "name": "Cunning Action",
+  "description": "Your agility allows you to take a bonus action to dash, disengage, or hide.",
+  "type": "utility",
+  "effect": {
+    "attribute": "speed",
+    "modifier": "bonus action",
+    "duration": 1
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

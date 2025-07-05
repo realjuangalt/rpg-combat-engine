@@ -1,0 +1,14 @@
+{
+  "name": "Magic Missile",
+  "description": "You create three glowing darts of magical force that unerringly strike their targets.",
+  "type": "damage",
+  "damage": "3d4+3",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "single"
+}

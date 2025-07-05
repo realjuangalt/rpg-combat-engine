@@ -1,0 +1,42 @@
+{
+  "name": "Threx the Brutal",
+  "description": "A towering barbarian with scarred skin and a fierce glare, wielding a massive greataxe with deadly precision.",
+  "hp": 60,
+  "ac": 14,
+  "strength": 18,
+  "dexterity": 12,
+  "constitution": 16,
+  "intelligence": 8,
+  "wisdom": 10,
+  "charisma": 9,
+  "class_type": "barbarian",
+  "damage": "2d6",
+  "inventory": [
+    {
+      "name": "Greataxe",
+      "description": "A large, heavy axe designed for devastating two-handed strikes.",
+      "type": "melee",
+      "damage": "1d12",
+      "finesse": false,
+      "versatile": {
+        "one_hand": null,
+        "two_hands": "1d12"
+      },
+      "mod": "strength"
+    },
+    {
+      "name": "Handaxe",
+      "description": "A small axe that can be wielded or thrown with ease.",
+      "type": "melee",
+      "damage": "1d6",
+      "finesse": false,
+      "versatile": {
+        "one_hand": "1d6",
+        "two_hands": null
+      },
+      "mod": "strength"
+    }
+  ],
+  "spells": [],
+  "conditions": {}
+}

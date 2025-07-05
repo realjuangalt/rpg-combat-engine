@@ -1,0 +1,9 @@
+{
+  "name": "Khan's Shortbow",
+  "description": "A finely crafted shortbow, engraved with runes of an ancient archer lord, granting enhanced precision and power.",
+  "type": "ranged",
+  "damage": "3d6",
+  "finesse": false,
+  "versatile": false,
+  "mod": "dexterity"
+}

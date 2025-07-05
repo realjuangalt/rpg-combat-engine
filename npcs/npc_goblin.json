@@ -1,0 +1,36 @@
+{
+  "name": "Goblin",
+  "description": "A small, sneaky creature with sharp teeth and a penchant for ambushes.",
+  "hp": 12,
+  "ac": 15,
+  "strength": 10,
+  "dexterity": 14,
+  "constitution": 10,
+  "intelligence": 8,
+  "wisdom": 8,
+  "charisma": 8,
+  "class_type": "fighter",
+  "damage": "1d6",
+  "inventory": [
+    {
+      "name": "Scimitar",
+      "description": "A curved blade designed for slashing attacks, favored by agile fighters.",
+      "type": "melee",
+      "damage": "1d6",
+      "finesse": true,
+      "versatile": false,
+      "mod": "dexterity"
+    },
+    {
+      "name": "Shortbow",
+      "description": "A small bow, easy to wield, used for ranged attacks.",
+      "type": "ranged",
+      "damage": "1d6",
+      "finesse": false,
+      "versatile": false,
+      "mod": "dexterity"
+    }
+  ],
+  "spells": [],
+  "conditions": {}
+}

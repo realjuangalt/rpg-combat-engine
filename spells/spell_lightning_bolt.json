@@ -1,0 +1,14 @@
+{
+  "name": "Lightning Bolt",
+  "description": "A stroke of lightning forms a line, dealing damage to creatures in its path.",
+  "type": "damage",
+  "damage": "8d6",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "dexterity",
+  "dc": 16,
+  "targeting": "aoe"
+}

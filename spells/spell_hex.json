@@ -1,0 +1,13 @@
+{
+  "name": "Hex",
+  "description": "You curse a creature, causing them to take extra damage and suffer disadvantage on ability checks.",
+  "type": "debuff",
+  "effect": {
+    "attribute": "adv_disadv",
+    "modifier": "disadvantage",
+    "duration": 1
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "single"
+}

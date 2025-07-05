@@ -1,0 +1,13 @@
+{
+  "name": "Hold Person",
+  "description": "You paralyze a humanoid, rendering them unable to move or act.",
+  "type": "utility",
+  "effect": {
+    "attribute": "dexterity",
+    "modifier": "paralyzed",
+    "duration": 10
+  },
+  "save": "wisdom",
+  "dc": 15,
+  "targeting": "single"
+}

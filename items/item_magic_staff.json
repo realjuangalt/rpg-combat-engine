@@ -1,0 +1,9 @@
+{
+  "name": "Magic Staff",
+  "description": "A twisted wooden staff, pulsing with arcane energy, used to channel spells.",
+  "type": "magic",
+  "damage": "1d4",
+  "finesse": false,
+  "versatile": false,
+  "mod": "intelligence"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Stunning Strike",
+  "description": "You strike a creature with force, attempting to stun them momentarily.",
+  "type": "utility",
+  "effect": {
+    "attribute": "constitution",
+    "modifier": "stunned",
+    "duration": 1
+  },
+  "save": "constitution",
+  "dc": 14,
+  "targeting": "single"
+}

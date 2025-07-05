@@ -1,0 +1,97 @@
+{
+  "name": "Gandalf",
+  "description": "A wise and powerful wizard, clad in grey robes, wielding ancient magic and a staff of great power.",
+  "hp": 40,
+  "ac": 12,
+  "strength": 10,
+  "dexterity": 12,
+  "constitution": 14,
+  "intelligence": 18,
+  "wisdom": 16,
+  "charisma": 15,
+  "class_type": "wizard",
+  "damage": "1d8",
+  "inventory": [
+    {
+      "name": "Staff of Power",
+      "description": "A gnarled wooden staff imbued with arcane energy, capable of channeling powerful spells.",
+      "type": "magic",
+      "damage": "1d8",
+      "finesse": false,
+      "versatile": false,
+      "mod": "intelligence"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Cure Wounds",
+      "description": "A creature you touch regains a number of hit points, healing minor wounds.",
+      "type": "healing",
+      "healing": "1d8+3",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "single"
+    },
+    {
+      "name": "Magic Missile",
+      "description": "You create three glowing darts of magical force that unerringly strike their targets.",
+      "type": "damage",
+      "damage": "3d4+3",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "single"
+    },
+    {
+      "name": "Fireball",
+      "description": "A bright streak flashes to a point and detonates, engulfing the area in flames.",
+      "type": "damage",
+      "damage": "8d6",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": "dexterity",
+      "dc": 16,
+      "targeting": "aoe"
+    },
+    {
+      "name": "Lightning Bolt",
+      "description": "A stroke of lightning forms a line, dealing damage to creatures in its path.",
+      "type": "damage",
+      "damage": "8d6",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": "dexterity",
+      "dc": 16,
+      "targeting": "aoe"
+    },
+    {
+      "name": "Shield",
+      "description": "An invisible barrier of magical force protects you, increasing your AC temporarily.",
+      "type": "buff",
+      "effect": {
+        "attribute": "ac",
+        "modifier": 5,
+        "duration": 1
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    }
+  ],
+  "conditions": {}
+}

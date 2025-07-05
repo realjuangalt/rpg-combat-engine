@@ -1,0 +1,14 @@
+{
+  "name": "Thunderclap",
+  "description": "You create a burst of thunderous sound, damaging and deafening nearby creatures.",
+  "type": "damage",
+  "damage": "2d6",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "constitution",
+  "dc": 15,
+  "targeting": "aoe"
+}

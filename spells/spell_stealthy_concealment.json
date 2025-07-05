@@ -1,0 +1,13 @@
+{
+  "name": "Stealthy Concealment",
+  "description": "You weave shadows around yourself, making it harder for enemies to land a hit.",
+  "type": "buff",
+  "effect": {
+    "attribute": "ac",
+    "modifier": "disadvantage",
+    "duration": 2
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

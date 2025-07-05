@@ -1,0 +1,14 @@
+{
+  "name": "Fireball",
+  "description": "A bright streak flashes to a point and detonates, engulfing the area in flames.",
+  "type": "damage",
+  "damage": "8d6",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "dexterity",
+  "dc": 16,
+  "targeting": "aoe"
+}

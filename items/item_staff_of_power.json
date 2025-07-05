@@ -1,0 +1,9 @@
+{
+  "name": "Staff of Power",
+  "description": "A gnarled wooden staff imbued with arcane energy, capable of channeling powerful spells.",
+  "type": "magic",
+  "damage": "1d8",
+  "finesse": false,
+  "versatile": false,
+  "mod": "intelligence"
+}

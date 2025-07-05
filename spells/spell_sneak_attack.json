@@ -1,0 +1,14 @@
+{
+  "name": "Sneak Attack",
+  "description": "You exploit a foe\u2019s distraction to deal extra damage with a precise strike.",
+  "type": "damage",
+  "damage": "2d6",
+  "effect": {
+    "attribute": "none",
+    "modifier": "none",
+    "duration": 0
+  },
+  "save": "dexterity",
+  "dc": 15,
+  "targeting": "single"
+}

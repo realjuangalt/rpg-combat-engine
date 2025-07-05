@@ -1,0 +1,9 @@
+{
+  "name": "Scimitar",
+  "description": "A curved blade designed for slashing attacks, favored by agile fighters.",
+  "type": "melee",
+  "damage": "1d6",
+  "finesse": true,
+  "versatile": false,
+  "mod": "dexterity"
+}

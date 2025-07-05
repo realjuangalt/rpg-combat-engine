@@ -1,0 +1,13 @@
+{
+  "name": "Expertise",
+  "description": "You tap into your honed skills, gaining an edge in specific tasks.",
+  "type": "buff",
+  "effect": {
+    "attribute": "adv_disadv",
+    "modifier": "advantage",
+    "duration": 4
+  },
+  "save": null,
+  "dc": null,
+  "targeting": "self"
+}

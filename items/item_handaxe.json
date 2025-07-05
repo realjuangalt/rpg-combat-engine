@@ -1,0 +1,12 @@
+{
+  "name": "Handaxe",
+  "description": "A small axe that can be wielded or thrown with ease.",
+  "type": "melee",
+  "damage": "1d6",
+  "finesse": false,
+  "versatile": {
+    "one_hand": "1d6",
+    "two_hands": null
+  },
+  "mod": "strength"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Blinding Light",
+  "description": "You conjure a burst of radiant light, temporarily blinding a creature.",
+  "type": "utility",
+  "effect": {
+    "attribute": "visibility",
+    "modifier": "blinded",
+    "duration": 2
+  },
+  "save": "constitution",
+  "dc": 14,
+  "targeting": "single"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Entangle",
+  "description": "Grasping weeds and vines sprout, restraining creatures in an area.",
+  "type": "utility",
+  "effect": {
+    "attribute": "dexterity",
+    "modifier": "restrained",
+    "duration": 1
+  },
+  "save": "strength",
+  "dc": 13,
+  "targeting": "aoe"
+}

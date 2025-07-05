@@ -1,0 +1,187 @@
+{
+  "name": "Emolas",
+  "description": "",
+  "hp": 45,
+  "ac": 15,
+  "strength": 12,
+  "dexterity": 16,
+  "constitution": 13,
+  "intelligence": 14,
+  "wisdom": 10,
+  "charisma": 15,
+  "class_type": "rogue",
+  "damage": "1d6",
+  "inventory": [
+    {
+      "name": "Khan's Shortbow",
+      "description": "A finely crafted shortbow, engraved with runes of an ancient archer lord, granting enhanced precision and power.",
+      "type": "ranged",
+      "damage": "3d6",
+      "finesse": false,
+      "versatile": false,
+      "mod": "dexterity"
+    },
+    {
+      "name": "Dagger",
+      "description": "A small, sharp blade, ideal for quick strikes or throwing.",
+      "type": "melee",
+      "damage": "1d4",
+      "finesse": true,
+      "versatile": false,
+      "mod": "dexterity"
+    },
+    {
+      "name": "Moonlight Katana",
+      "description": "A sleek, magical blade that gleams faintly under moonlight, imbued with enchantments for swift and deadly strikes.",
+      "type": "melee",
+      "damage": "1d8+3",
+      "finesse": true,
+      "versatile": false,
+      "mod": "dexterity"
+    },
+    {
+      "name": "Shortsword",
+      "description": "A lightweight, versatile blade, perfect for quick slashes and thrusts.",
+      "type": "melee",
+      "damage": "1d6",
+      "finesse": true,
+      "versatile": false,
+      "mod": "dexterity"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Sonic Disintegration",
+      "description": "You unleash a blast of sonic energy that tears through a target, potentially shattering stone structures.",
+      "type": "damage",
+      "damage": "2d10+2",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "single"
+    },
+    {
+      "name": "Fortune's Favor",
+      "description": "You grant a creature a spark of luck, allowing them to excel in their next endeavor.",
+      "type": "buff",
+      "effect": {
+        "attribute": "adv_disadv",
+        "modifier": "advantage",
+        "duration": 4
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "single"
+    },
+    {
+      "name": "Curse of Misfortune",
+      "description": "You curse a creature with ill luck, hindering their actions.",
+      "type": "debuff",
+      "effect": {
+        "attribute": "adv_disadv",
+        "modifier": "disadvantage",
+        "duration": 3
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "single"
+    },
+    {
+      "name": "Dancing Lights",
+      "description": "You create up to four torch-sized lights that hover and move at your command, illuminating an area.",
+      "type": "utility",
+      "effect": {
+        "attribute": "visibility",
+        "modifier": "bright",
+        "duration": 10
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    },
+    {
+      "name": "Faerie Fire",
+      "description": "Each object in a 20-foot cube is outlined in light, granting advantage on attack rolls against affected creatures.",
+      "type": "utility",
+      "effect": {
+        "attribute": "visibility",
+        "modifier": "advantage on attacks",
+        "duration": 10
+      },
+      "save": "dexterity",
+      "dc": 14,
+      "targeting": "aoe"
+    },
+    {
+      "name": "Minor Illusion",
+      "description": "You create a sound or image of an object that lasts for up to a minute, deceiving observers.",
+      "type": "utility",
+      "effect": {
+        "attribute": "visibility",
+        "modifier": "disadvantage",
+        "duration": 2
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    },
+    {
+      "name": "Stealthy Concealment",
+      "description": "You weave shadows around yourself, making it harder for enemies to land a hit.",
+      "type": "buff",
+      "effect": {
+        "attribute": "ac",
+        "modifier": "disadvantage",
+        "duration": 2
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    },
+    {
+      "name": "Sneak Attack",
+      "description": "You exploit a foe\u2019s distraction to deal extra damage with a precise strike.",
+      "type": "damage",
+      "damage": "2d6",
+      "effect": {
+        "attribute": "none",
+        "modifier": "none",
+        "duration": 0
+      },
+      "save": "dexterity",
+      "dc": 15,
+      "targeting": "single"
+    },
+    {
+      "name": "Expertise",
+      "description": "You tap into your honed skills, gaining an edge in specific tasks.",
+      "type": "buff",
+      "effect": {
+        "attribute": "adv_disadv",
+        "modifier": "advantage",
+        "duration": 4
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    },
+    {
+      "name": "Cunning Action",
+      "description": "Your agility allows you to take a bonus action to dash, disengage, or hide.",
+      "type": "utility",
+      "effect": {
+        "attribute": "speed",
+        "modifier": "bonus action",
+        "duration": 1
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    }
+  ],
+  "conditions": {}
+}

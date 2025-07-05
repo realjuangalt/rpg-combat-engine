@@ -1,0 +1,13 @@
+{
+  "name": "Suggestion",
+  "description": "You suggest a course of action to a creature, magically influencing their behavior.",
+  "type": "utility",
+  "effect": {
+    "attribute": "charisma",
+    "modifier": "+2",
+    "duration": 8
+  },
+  "save": "wisdom",
+  "dc": 15,
+  "targeting": "single"
+}
