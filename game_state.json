@@ -1,6 +1,83 @@
 {
   "players": [
     {
+  "name": "King-Rabbit",
+  "description": "",
+  "hp": 15,
+  "ac": 18,
+  "strength": 8,
+  "dexterity": 20,
+  "constitution": 12,
+  "intelligence": 10,
+  "wisdom": 16,
+  "charisma": 14,
+  "class_type": "sorcerer",
+  "damage": "1d6",
+  "inventory": [
+    {
+      "name": "Long Carrot Magic Wand",
+      "type": "magic",
+      "damage": "1d8",
+      "finesse": true,
+      "mod": "dexterity",
+      "versatile": {
+        "one_hand": "1d6",
+        "two_hands": "1d8"
+      }
+    },
+    {
+      "name": "Orange Dress Bow",
+      "type": "misc",
+      "damage": "",
+      "finesse": false,
+      "mod": "dexterity"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Psychic Blast",
+      "type": "damage",
+      "damage": "2d6+3",
+      "effect": {
+        "attribute": "health",
+        "modifier": -5,
+        "duration": 1
+      },
+      "save": "intelligence",
+      "dc": 15,
+      "targeting": "single"
+    },
+    {
+      "name": "Mind Shield",
+      "type": "buff",
+      "effect": {
+        "attribute": "ac",
+        "modifier": 2,
+        "duration": 3
+      },
+      "save": null,
+      "dc": null,
+      "targeting": "self"
+    },
+    {
+      "name": "Telekinetic Thrust",
+      "type": "utility",
+      "damage": "1d8+2",
+      "effect": {
+        "attribute": "speed",
+        "modifier": 10,
+        "duration": 1
+      },
+      "save": "strength",
+      "dc": 13,
+      "targeting": "single"
+    }
+  ],
+  "conditions": {
+    "none": 0
+  }
+},
+    {
       "name": "Emolas",
       "description": "",
       "hp": 45,

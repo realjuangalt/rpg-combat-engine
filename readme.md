@@ -55,6 +55,11 @@ pip install requests python-dotenv jsonschema rich
    python3 tools/refine.py
    ```
 
+5. **Archiving Game State Data**: Use `split_game_state.py` in the `tools` folder to split `game_state.json` into individual JSON files for players, NPCs, items, and spells, organizing them into respective folders.
+   ```bash
+   python3 tools/split_game_state.py
+   ```
+
 ## How It Works
 
 ### Combat Engine (`combat_engine.py`)
@@ -81,6 +86,9 @@ pip install requests python-dotenv jsonschema rich
 ### Game State Validator (`tools/refine.py`)
 - Validates `game_state.json` against `gs_schema.json` using the `jsonschema` library, reporting any discrepancies to ensure data consistency. Enhanced with `rich` for detailed error output.
 
+### Game State Archiver (`tools/split_game_state.py`)
+- Processes `game_state.json` to create individual JSON files for each player character, NPC, item, and spell, organizing them into `/players`, `/npcs`, `/items`, and `/spells` folders respectively for easier management and reference.
+
 ## File Structure
 
 - `.env`: Contains the Venice AI API key for authentication.
@@ -92,7 +100,11 @@ pip install requests python-dotenv jsonschema rich
 - `/players/`: Directory where generated character JSON files and lore text files are saved.
 - `tools/spell_empora.py`: Script for generating spells and items.
 - `tools/refine.py`: Script for validating game state data against the schema.
+- `tools/split_game_state.py`: Script for splitting game state data into individual JSON files for players, NPCs, items, and spells.
 - `documentation/gs_schema_documentation.md`: Detailed documentation on the schema, addressing limitations and intended logic not captured in JSON.
+- `/npcs/`: Directory where individual NPC JSON files are saved by `split_game_state.py`.
+- `/items/`: Directory where individual item JSON files from all characters are saved by `split_game_state.py`.
+- `/spells/`: Directory where individual spell JSON files from all characters are saved by `split_game_state.py`.
 
 ## Output Format
 

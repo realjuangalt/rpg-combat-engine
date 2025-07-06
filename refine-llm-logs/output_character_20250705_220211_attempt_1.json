@@ -1,0 +1,37 @@
+{
+  "id": "chatcmpl-a646686186814bbfb6d9873ae0867b51",
+  "object": "chat.completion",
+  "created": 1751770931,
+  "model": "llama-3.3-70b",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "reasoning_content": null,
+        "content": "```json\n{\n  \"players\": [\n    {\n      \"name\": \"King-Rabbit\",\n      \"description\": \"\",\n      \"hp\": 15,\n      \"ac\": 18,\n      \"strength\": 8,\n      \"dexterity\": 20,\n      \"constitution\": 12,\n      \"intelligence\": 10,\n      \"wisdom\": 16,\n      \"charisma\": 14,\n      \"class_type\": \"sorcerer\",\n      \"damage\": \"1d6\",\n      \"inventory\": [\n        {\n          \"name\": \"Long Carrot Magic Wand\",\n          \"type\": \"magic\",\n          \"damage\": \"1d8\",\n          \"finesse\": true,\n          \"mod\": \"dexterity\",\n          \"versatile\": {\n            \"one_hand\": \"1d6\",\n            \"two_hands\": \"1d8\"\n          }\n        },\n        {\n          \"name\": \"Orange Dress Bow\",\n          \"type\": \"misc\",\n          \"damage\": \"\",\n          \"finesse\": false,\n          \"mod\": \"dexterity\"\n        }\n      ],\n      \"spells\": [\n        {\n          \"name\": \"Psychic Blast\",\n          \"type\": \"damage\",\n          \"damage\": \"2d6+3\",\n          \"effect\": {\n            \"attribute\": \"health\",\n            \"modifier\": -5,\n            \"duration\": 1\n          },\n          \"save\": \"intelligence\",\n          \"dc\": 15,\n          \"targeting\": \"single\"\n        },\n        {\n          \"name\": \"Mind Shield\",\n          \"type\": \"buff\",\n          \"effect\": {\n            \"attribute\": \"ac\",\n            \"modifier\": 2,\n            \"duration\": 3\n          },\n          \"save\": null,\n          \"dc\": null,\n          \"targeting\": \"self\"\n        },\n        {\n          \"name\": \"Telekinetic Thrust\",\n          \"type\": \"utility\",\n          \"damage\": \"1d8+2\",\n          \"effect\": {\n            \"attribute\": \"speed\",\n            \"modifier\": 10,\n            \"duration\": 1\n          },\n          \"save\": \"strength\",\n          \"dc\": 13,\n          \"targeting\": \"single\"\n        }\n      ],\n      \"conditions\": {\n        \"none\": 0\n      }\n    }\n  ],\n  \"npcs\": []\n}\n```",
+        "tool_calls": []
+      },
+      "logprobs": null,
+      "finish_reason": "stop",
+      "stop_reason": null
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3257,
+    "total_tokens": 3750,
+    "completion_tokens": 493,
+    "prompt_tokens_details": null
+  },
+  "prompt_logprobs": null,
+  "kv_transfer_params": null,
+  "venice_parameters": {
+    "strip_thinking_response": false,
+    "disable_thinking": false,
+    "enable_web_search": "auto",
+    "enable_web_citations": false,
+    "include_search_results_in_stream": false,
+    "include_venice_system_prompt": true,
+    "web_search_citations": []
+  }
+}
