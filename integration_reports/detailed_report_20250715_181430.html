@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combat Engine Test Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+        .summary { background-color: #e8f5e8; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .test-section { margin: 20px 0; }
+        .test-item { border: 1px solid #ddd; margin: 10px 0; padding: 15px; border-radius: 5px; }
+        .passed { border-left: 5px solid #4CAF50; }
+        .failed { border-left: 5px solid #f44336; }
+        .analysis { background-color: #f9f9f9; padding: 10px; margin: 10px 0; border-radius: 3px; }
+        .output { background-color: #f5f5f5; padding: 10px; margin: 10px 0; border-radius: 3px; font-family: monospace; white-space: pre-wrap; max-height: 300px; overflow-y: auto; }
+        .timestamp { color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Combat Engine Test Report</h1>
+        <p>Generated on: 2025-07-15T18:14:30.315788</p>
+    </div>
+    
+    <div class="summary">
+        <h2>Summary</h2>
+        <p><strong>Total Tests:</strong> 5</p>
+        <p><strong>Passed:</strong> 0</p>
+        <p><strong>Failed:</strong> 5</p>
+        <p><strong>Success Rate:</strong> 0.0%</p>
+    </div>
+
+    <div class="test-section">
+        <h2>Offensive Spell Tests</h2>
+
+        <div class="test-item failed">
+            <h3>basic_combat</h3>
+            <p class="timestamp">Tested: 2025-07-15T18:14:30.461093</p>
+            
+            <div class="analysis">
+                <h4>Analysis:</h4>
+                <ul>
+                    <li>✅ Combat Started</li>
+                    <li>✅ Initiative Rolled</li>
+                    <li>✅ Attacks Processed</li>
+                    <li>❌ Damage Applied</li>
+                    <li>✅ Combat Ended</li>
+                    <li>✅ No Errors</li>
+
+                </ul>
+            </div>
+            
+            <div class="output">
+                <h4>Output:</h4>
+                <div class="output-content">
+[2;36m[07/15/25 18:14:30][0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=729802;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=787973;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat Begins --- [0m                               [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter rolls [1;36m11[0m for initiative.                ]8;id=540046;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=977790;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin rolls [1;36m3[0m for initiative.                  ]8;id=88371;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=981042;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m1[0m[1;33m: Start!---[0m                               ]8;id=39182;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=814262;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Fighter's turn with [1;36m30[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Move
+Choose a weapon:
+[1;36m1[0m. Longsword [1m([0mmelee - Damage: 1d8[1m)[0m
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Test Goblin [1m([0mHP: [1;36m15[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m8[0m[1m)[0m + [1;36m3[0m = `[1;36m11[0m` = attack_mod ->   ]8;id=529706;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=7895;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m3[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter attacks Test Goblin with Longsword      ]8;id=303589;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=803930;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter rolls [1m([0m1d20 [1m([0m[1;36m8[0m[1m)[0m + [1;36m3[0m = `[1;36m11[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=955938;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=88160;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Goblin [1m([0mAC [1;36m13[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter misses Test Goblin with Longsword!      ]8;id=40352;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=958754;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's turn ends. Conditions & effects       ]8;id=247811;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=283928;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin decides to attack Test Fighter.          ]8;id=78603;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=247107;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m18[0m[1m)[0m + [1;36m2[0m = `[1;36m20[0m` = attack_mod ->  ]8;id=655574;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=211245;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m2[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin attacks Test Fighter with Scimitar       ]8;id=614117;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=92827;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin rolls [1m([0m1d20 [1m([0m[1;36m18[0m[1m)[0m + [1;36m2[0m = `[1;36m20[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=631347;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=860818;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Fighter [1m([0mAC [1;36m15[0m[1m)[0m.                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Goblin hits Test Fighter with Scimitar for 1d6 [0m ]8;id=461009;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=194277;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;33m([0m[1;33m**[0m[1;36m1[0m[1;33m**[0m[1;33m)[0m[1;33m + [0m[1;36m2[0m[1;33m = `[0m[1;36m3[0m[1;33m` damage![0m                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's HP is now [1;36m27[0m.                         ]8;id=423957;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=925415;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin's turn ends. Conditions & effects        ]8;id=108033;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=128585;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m1[0m[1;33m ---[0m                               ]8;id=41954;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=351940;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m2[0m[1;33m: Start!---[0m                               ]8;id=3665;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=658562;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Fighter's turn with [1;36m27[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Move
+Choose a weapon:
+[1;36m1[0m. Longsword [1m([0mmelee - Damage: 1d8[1m)[0m
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Test Goblin [1m([0mHP: [1;36m15[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m3[0m[1m)[0m + [1;36m3[0m = `[1;36m6[0m` = attack_mod -> [1;36m3[0m, ]8;id=758969;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=953187;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         adv_disadv -> normal                                 [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter attacks Test Goblin with Longsword      ]8;id=251262;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=250320;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter rolls [1m([0m1d20 [1m([0m[1;36m3[0m[1m)[0m + [1;36m3[0m = `[1;36m6[0m`[1m)[0m [1m([0mnormal[1m)[0m to  ]8;id=337647;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=213425;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Goblin [1m([0mAC [1;36m13[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter misses Test Goblin with Longsword!      ]8;id=978600;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=389658;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's turn ends. Conditions & effects       ]8;id=230126;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=565225;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin decides to attack Test Fighter.          ]8;id=403110;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=19823;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m6[0m[1m)[0m + [1;36m2[0m = `[1;36m8[0m` = attack_mod -> [1;36m2[0m, ]8;id=60791;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=225563;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         adv_disadv -> normal                                 [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin attacks Test Fighter with Scimitar       ]8;id=722374;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=885951;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin rolls [1m([0m1d20 [1m([0m[1;36m6[0m[1m)[0m + [1;36m2[0m = `[1;36m8[0m`[1m)[0m [1m([0mnormal[1m)[0m to   ]8;id=58903;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=136463;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Fighter [1m([0mAC [1;36m15[0m[1m)[0m.                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin misses Test Fighter with Scimitar!       ]8;id=892845;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=283685;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin's turn ends. Conditions & effects        ]8;id=151620;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=347709;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m2[0m[1;33m ---[0m                               ]8;id=873549;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=394309;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m3[0m[1;33m: Start!---[0m                               ]8;id=656210;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=844294;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Fighter's turn with [1;36m27[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Move
+Choose a weapon:
+[1;36m1[0m. Longsword [1m([0mmelee - Damage: 1d8[1m)[0m
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Test Goblin [1m([0mHP: [1;36m15[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m17[0m[1m)[0m + [1;36m3[0m = `[1;36m20[0m` = attack_mod ->  ]8;id=40448;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=998779;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m3[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter attacks Test Goblin with Longsword      ]8;id=652834;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=937484;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter rolls [1m([0m1d20 [1m([0m[1;36m17[0m[1m)[0m + [1;36m3[0m = `[1;36m20[0m`[1m)[0m [1m([0mnormal[1m)[0m   ]8;id=292284;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=542491;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         to hit Test Goblin [1m([0mAC [1;36m13[0m[1m)[0m.                          [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Fighter hits Test Goblin with Longsword for 1d8[0m ]8;id=797960;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=94794;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;33m([0m[1;36m4[0m[1;33m)[0m[1;33m + [0m[1;36m3[0m[1;33m = `[0m[1;36m7[0m[1;33m` damage![0m                                [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin's HP is now [1;36m8[0m.                           ]8;id=344450;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=234065;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's turn ends. Conditions & effects       ]8;id=809524;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=81483;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin decides to attack Test Fighter.          ]8;id=965935;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=218192;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m15[0m[1m)[0m + [1;36m2[0m = `[1;36m17[0m` = attack_mod ->  ]8;id=830639;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=109623;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m2[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin attacks Test Fighter with Scimitar       ]8;id=340705;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=489577;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin rolls [1m([0m1d20 [1m([0m[1;36m15[0m[1m)[0m + [1;36m2[0m = `[1;36m17[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=63008;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=410687;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Fighter [1m([0mAC [1;36m15[0m[1m)[0m.                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Goblin hits Test Fighter with Scimitar for 1d6 [0m ]8;id=493881;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=214619;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;33m([0m[1;36m3[0m[1;33m)[0m[1;33m + [0m[1;36m2[0m[1;33m = `[0m[1;36m5[0m[1;33m` damage![0m                                [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's HP is now [1;36m22[0m.                         ]8;id=509523;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=687078;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Goblin's turn ends. Conditions & effects        ]8;id=858069;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=440424;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m3[0m[1;33m ---[0m                               ]8;id=561902;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=549266;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;36m--- Combat ended after [0m[1;36m3[0m[1;36m rounds [0m[1;36m([0m[1;36mtest limit[0m[1;36m)[0m[1;36m. ---[0m    ]8;id=757336;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=711746;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=464133;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=738147;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat has ended after [0m[1;36m3[0m[1;36m rounds. ---[0m             [2m                   [0m
+[1;35mThank you for playing! Exiting combat engine[0m[1;35m...[0m
+
+                </div>
+            </div>
+        </div>
+
+        <div class="test-item failed">
+            <h3>advantage_disadvantage</h3>
+            <p class="timestamp">Tested: 2025-07-15T18:14:30.461104</p>
+            
+            <div class="analysis">
+                <h4>Analysis:</h4>
+                <ul>
+                    <li>✅ Blinding Spell Casted</li>
+                    <li>✅ Blinded Condition Applied</li>
+                    <li>❌ Disadvantage Applied</li>
+                    <li>❌ Disadvantage Rolls Logged</li>
+                    <li>✅ No Errors</li>
+
+                </ul>
+            </div>
+            
+            <div class="output">
+                <h4>Output:</h4>
+                <div class="output-content">
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=299967;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=6100;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat Begins --- [0m                               [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter rolls [1;36m9[0m for initiative.                 ]8;id=129771;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=818469;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1;36m7[0m for initiative.                  ]8;id=247970;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=840435;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m1[0m[1;33m: Start!---[0m                               ]8;id=27394;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=334091;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Fighter's turn with [1;36m30[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Cast a Spell
+[1;36m3[0m. Move
+Choose a spell:
+[1;36m1[0m. Blinding Light
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Test Target [1m([0mHP: [1;36m25[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;36mTest Fighter begins casting Blinding Light[0m[1;33m...[0m        ]8;id=904654;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=292762;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter uses fighter spellcasting modifier: [1;36m0[0m   ]8;id=583360;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=861789;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Blinding Light will affect: [1m[[0m[32m'Test Target'[0m[1m][0m          ]8;id=83729;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=107073;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;35mProcessing utility spell: Blinding Light applies [0m    ]8;id=472118;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=91372;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;35mblinded[0m                                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Attempting to apply blinded to Test Target[33m...[0m        ]8;id=231400;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=475585;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target must make a constitution saving throw    ]8;id=78733;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=985268;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mDC [1;36m14[0m[1m)[0m to resist blinded.                           [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls a saving throw: 1d20 [1m([0m1d20 [1m([0m[1;36m15[0m[1m)[0m +  ]8;id=483587;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=654936;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m0[0m = `[1;36m15[0m`[1m)[0m + [1;36m0[0m [1m([0mnormal[1m)[0m against DC [1;36m14[0m.                [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Target successfully removes blinded.[0m            ]8;id=401690;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=681837;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;32mTest Target succeeds on the saving throw and avoids [0m ]8;id=504739;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=833000;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;32mblinded![0m                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's turn ends. Conditions & effects       ]8;id=571370;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=702814;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target decides to attack Test Fighter.          ]8;id=491490;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=562377;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m14[0m[1m)[0m + [1;36m1[0m = `[1;36m15[0m` = attack_mod ->  ]8;id=575763;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=416043;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m1[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target attacks Test Fighter with Club [1m([0mnormal[1m)[0m. ]8;id=469556;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=866863;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1m([0m1d20 [1m([0m[1;36m14[0m[1m)[0m + [1;36m1[0m = `[1;36m15[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=772848;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=474116;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Fighter [1m([0mAC [1;36m15[0m[1m)[0m.                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Target hits Test Fighter with Club for 1d6 [0m[1;33m([0m[1;36m4[0m[1;33m)[0m[1;33m [0m ]8;id=596121;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=285005;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;33m+ [0m[1;36m1[0m[1;33m = `[0m[1;36m5[0m[1;33m` damage![0m                                    [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's HP is now [1;36m25[0m.                         ]8;id=840361;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=791000;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target's turn ends. Conditions & effects        ]8;id=429423;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=1345;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m1[0m[1;33m ---[0m                               ]8;id=659680;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=967343;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m2[0m[1;33m: Start!---[0m                               ]8;id=233077;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=809542;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Fighter's turn with [1;36m25[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Cast a Spell
+[1;36m3[0m. Move
+Choose a weapon:
+[1;36m1[0m. Longsword [1m([0mmelee - Damage: 1d8[1m)[0m
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Test Target [1m([0mHP: [1;36m25[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m7[0m[1m)[0m + [1;36m3[0m = `[1;36m10[0m` = attack_mod ->   ]8;id=28600;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=627595;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m3[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter attacks Test Target with Longsword      ]8;id=263603;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=836566;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter rolls [1m([0m1d20 [1m([0m[1;36m7[0m[1m)[0m + [1;36m3[0m = `[1;36m10[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=408054;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=900222;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Target [1m([0mAC [1;36m13[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter misses Test Target with Longsword!      ]8;id=267255;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=671282;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's turn ends. Conditions & effects       ]8;id=374991;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=438352;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target decides to attack Test Fighter.          ]8;id=988700;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=341221;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m4[0m[1m)[0m + [1;36m1[0m = `[1;36m5[0m` = attack_mod -> [1;36m1[0m, ]8;id=801554;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=680913;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         adv_disadv -> normal                                 [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target attacks Test Fighter with Club [1m([0mnormal[1m)[0m. ]8;id=950131;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=902554;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1m([0m1d20 [1m([0m[1;36m4[0m[1m)[0m + [1;36m1[0m = `[1;36m5[0m`[1m)[0m [1m([0mnormal[1m)[0m to   ]8;id=579190;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=991765;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Fighter [1m([0mAC [1;36m15[0m[1m)[0m.                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target misses Test Fighter with Club!           ]8;id=752278;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=652861;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target's turn ends. Conditions & effects        ]8;id=904631;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=581031;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m2[0m[1;33m ---[0m                               ]8;id=255075;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=167096;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m3[0m[1;33m: Start!---[0m                               ]8;id=473577;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=233472;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Fighter's turn with [1;36m25[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Cast a Spell
+[1;36m3[0m. Move
+Choose a weapon:
+[1;36m1[0m. Longsword [1m([0mmelee - Damage: 1d8[1m)[0m
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Test Target [1m([0mHP: [1;36m25[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m2[0m[1m)[0m + [1;36m3[0m = `[1;36m5[0m` = attack_mod -> [1;36m3[0m, ]8;id=879556;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=377757;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         adv_disadv -> normal                                 [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter attacks Test Target with Longsword      ]8;id=635444;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=979339;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter rolls [1m([0m1d20 [1m([0m[1;36m2[0m[1m)[0m + [1;36m3[0m = `[1;36m5[0m`[1m)[0m [1m([0mnormal[1m)[0m to  ]8;id=765185;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=654139;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Target [1m([0mAC [1;36m13[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter misses Test Target with Longsword!      ]8;id=806515;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=267347;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's turn ends. Conditions & effects       ]8;id=519368;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=337208;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target decides to attack Test Fighter.          ]8;id=621681;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=222832;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m19[0m[1m)[0m + [1;36m1[0m = `[1;36m20[0m` = attack_mod ->  ]8;id=263295;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=270494;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m1[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target attacks Test Fighter with Club [1m([0mnormal[1m)[0m. ]8;id=781650;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=969607;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1m([0m1d20 [1m([0m[1;36m19[0m[1m)[0m + [1;36m1[0m = `[1;36m20[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=833624;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=47096;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Fighter [1m([0mAC [1;36m15[0m[1m)[0m.                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Target hits Test Fighter with Club for 1d6 [0m     ]8;id=183042;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=57218;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;33m([0m[1;33m**[0m[1;36m1[0m[1;33m**[0m[1;33m)[0m[1;33m + [0m[1;36m1[0m[1;33m = `[0m[1;36m2[0m[1;33m` damage![0m                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Fighter's HP is now [1;36m23[0m.                         ]8;id=209668;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=424866;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target's turn ends. Conditions & effects        ]8;id=61622;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=122476;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m3[0m[1;33m ---[0m                               ]8;id=943781;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=382146;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;36m--- Combat ended after [0m[1;36m3[0m[1;36m rounds [0m[1;36m([0m[1;36mtest limit[0m[1;36m)[0m[1;36m. ---[0m    ]8;id=203950;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=409245;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=408152;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=438786;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat has ended after [0m[1;36m3[0m[1;36m rounds. ---[0m             [2m                   [0m
+[1;35mThank you for playing! Exiting combat engine[0m[1;35m...[0m
+
+                </div>
+            </div>
+        </div>
+
+        <div class="test-item failed">
+            <h3>combat_end</h3>
+            <p class="timestamp">Tested: 2025-07-15T18:14:30.461105</p>
+            
+            <div class="analysis">
+                <h4>Analysis:</h4>
+                <ul>
+                    <li>✅ Combat Started</li>
+                    <li>✅ Characters Defeated</li>
+                    <li>✅ Combat Ended</li>
+                    <li>✅ Proper Ending Message</li>
+                    <li>✅ No Errors</li>
+
+                </ul>
+            </div>
+            
+            <div class="output">
+                <h4>Output:</h4>
+                <div class="output-content">
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=629249;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=188755;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat Begins --- [0m                               [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Weak Fighter rolls [1;36m11[0m for initiative.                ]8;id=407318;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=244737;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Weak Goblin rolls [1;36m10[0m for initiative.                 ]8;id=653812;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=39631;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m1[0m[1;33m: Start!---[0m                               ]8;id=424355;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=545950;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Weak Fighter's turn with [1;36m5[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Move
+Choose a weapon:
+[1;36m1[0m. Longsword [1m([0mmelee - Damage: 1d8[1m)[0m
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Weak Goblin [1m([0mHP: [1;36m3[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m13[0m[1m)[0m + [1;36m3[0m = `[1;36m16[0m` = attack_mod ->  ]8;id=209077;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=711615;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m3[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Weak Fighter attacks Weak Goblin with Longsword      ]8;id=171540;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=308032;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mnormal[1m)[0m.                                            [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Weak Fighter rolls [1m([0m1d20 [1m([0m[1;36m13[0m[1m)[0m + [1;36m3[0m = `[1;36m16[0m`[1m)[0m [1m([0mnormal[1m)[0m   ]8;id=480142;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=34874;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         to hit Weak Goblin [1m([0mAC [1;36m13[0m[1m)[0m.                          [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mWeak Fighter hits Weak Goblin with Longsword for 1d8[0m ]8;id=899127;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=860737;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;33m([0m[1;36m5[0m[1;33m)[0m[1;33m + [0m[1;36m3[0m[1;33m = `[0m[1;36m8[0m[1;33m` damage![0m                                [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;31mWeak Goblin has been defeated![0m                       ]8;id=579581;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=996073;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Weak Goblin has been removed from the initiative     ]8;id=243017;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=874861;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         order.                                               [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Weak Fighter's turn ends. Conditions & effects       ]8;id=390423;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=881613;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m1[0m[1;33m ---[0m                               ]8;id=79850;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=1245;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;32mAll NPCs have been defeated![0m The players are         ]8;id=95663;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=534607;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         victorious.                                          [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=521784;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=350998;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat has ended after [0m[1;36m1[0m[1;36m rounds. ---[0m             [2m                   [0m
+[1;35mThank you for playing! Exiting combat engine[0m[1;35m...[0m
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="test-section">
+        <h2>Defensive Spell Tests</h2>
+
+        <div class="test-item failed">
+            <h3>unified_effects</h3>
+            <p class="timestamp">Tested: 2025-07-15T18:14:30.461100</p>
+            
+            <div class="analysis">
+                <h4>Analysis:</h4>
+                <ul>
+                    <li>✅ Effect Created</li>
+                    <li>✅ Effect Applied</li>
+                    <li>✅ Attributes Modified</li>
+                    <li>✅ Duration Tracked</li>
+                    <li>✅ Effect Removed</li>
+                    <li>✅ No Errors</li>
+
+                </ul>
+            </div>
+            
+            <div class="output">
+                <h4>Output:</h4>
+                <div class="output-content">
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;34mApplying unified effect Test Effect to Test Char[0m     ]8;id=423942;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=886767;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Effect increases strength by [1;36m2[0m for Test Char.   ]8;id=194119;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=296689;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         New value: [1;36m16[0m                                        [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Char now has advantage on                       ]8;id=55272;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=27541;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         advantage/disadvantage.                              [2m                   [0m
+Applied effect. Strength: 16, Adv/Disadv: advantage
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Duration of Test Effect decreased to [1;36m1[0m rounds.       ]8;id=508589;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=321970;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+Duration after decrement: 1, Expired: False
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;34mRemoving unified effect Test Effect from Test Char[0m   ]8;id=131631;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=126053;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Effect decreases strength by [1;36m2[0m for Test Char.   ]8;id=499787;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=330368;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         New value: [1;36m14[0m                                        [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Char's advantage/disadvantage reset to normal.  ]8;id=451417;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=983792;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+After removal. Strength: 14, Adv/Disadv: normal
+
+                </div>
+            </div>
+        </div>
+
+        <div class="test-item failed">
+            <h3>condition_removal</h3>
+            <p class="timestamp">Tested: 2025-07-15T18:14:30.461103</p>
+            
+            <div class="analysis">
+                <h4>Analysis:</h4>
+                <ul>
+                    <li>✅ Spell Casted</li>
+                    <li>✅ Condition Applied</li>
+                    <li>✅ Saving Throw Processed</li>
+                    <li>❌ Condition Expired</li>
+                    <li>✅ No Errors</li>
+
+                </ul>
+            </div>
+            
+            <div class="output">
+                <h4>Output:</h4>
+                <div class="output-content">
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=478071;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=256714;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat Begins --- [0m                               [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster rolls [1;36m13[0m for initiative.                 ]8;id=132872;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=837143;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1;36m5[0m for initiative.                  ]8;id=71756;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=573635;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m1[0m[1;33m: Start!---[0m                               ]8;id=313272;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=518932;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Caster's turn with [1;36m25[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Cast a Spell
+[1;36m3[0m. Move
+Choose a spell:
+[1;36m1[0m. Test Stun
+[1;36m2[0m. On second thought[33m...[0m
+[1;36m1[0m. Test Target [1m([0mHP: [1;36m20[0m[1m)[0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;36mTest Caster begins casting Test Stun[0m[1;33m...[0m              ]8;id=640177;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=799722;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster uses wizard spellcasting modifier: [1;36m3[0m     ]8;id=949874;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=935556;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Stun will affect: [1m[[0m[32m'Test Target'[0m[1m][0m               ]8;id=298097;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=781412;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;35mProcessing condition spell: Test Stun applies [0m       ]8;id=6485;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=695376;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;35mstunned[0m                                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Attempting to apply stunned to Test Target[33m...[0m        ]8;id=323386;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=94199;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target must make a constitution saving throw    ]8;id=914824;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=356579;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1m([0mDC [1;36m12[0m[1m)[0m to resist stunned.                           [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls a saving throw: 1d20 [1m([0m1d20 [1m([0m[1;36m10[0m[1m)[0m +  ]8;id=319503;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=293975;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m0[0m = `[1;36m10[0m`[1m)[0m + [1;36m0[0m [1m([0mnormal[1m)[0m against DC [1;36m12[0m.                [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;31mTest Target fails the saving throw and is affected [0m  ]8;id=249160;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=22840;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;31mby stunned.[0m                                          [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mApplying stunned to Test Target for [0m[1;36m2[0m[1;33m [0m[1;35mround[0m[1;33m([0m[1;33ms[0m[1;33m)[0m[1;33m.[0m      ]8;id=979062;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=147962;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls a saving throw: 1d20 [1m([0m1d20 [1m([0m[1;36m12[0m[1m)[0m +  ]8;id=648496;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=573385;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m0[0m = `[1;36m12[0m`[1m)[0m + [1;36m0[0m [1m([0mnormal[1m)[0m against DC [1;36m12[0m.                [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Target successfully removes stunned.[0m            ]8;id=870500;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=187246;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target succeeds on the saving throw and avoids  ]8;id=528045;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=700558;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         stunned.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Caster successfully cast Test Stun on Test [0m     ]8;id=181203;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=770915;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;33mTarget![0m                                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster's turn ends. Conditions & effects        ]8;id=383875;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=957174;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target decides to attack Test Caster.           ]8;id=600221;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=446967;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m4[0m[1m)[0m + [1;36m1[0m = `[1;36m5[0m` = attack_mod -> [1;36m1[0m, ]8;id=467738;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=132773;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         adv_disadv -> normal                                 [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target attacks Test Caster with Club [1m([0mnormal[1m)[0m.  ]8;id=100190;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=252051;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1m([0m1d20 [1m([0m[1;36m4[0m[1m)[0m + [1;36m1[0m = `[1;36m5[0m`[1m)[0m [1m([0mnormal[1m)[0m to   ]8;id=686194;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=371529;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Caster [1m([0mAC [1;36m14[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target misses Test Caster with Club!            ]8;id=967062;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=464119;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target's turn ends. Conditions & effects        ]8;id=628277;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=787027;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m1[0m[1;33m ---[0m                               ]8;id=232005;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=557978;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m2[0m[1;33m: Start!---[0m                               ]8;id=144246;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=543457;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Caster's turn with [1;36m25[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Cast a Spell
+[1;36m3[0m. Move
+Test Caster moves! [1m([0mMovement system not yet implemented[1m)[0m
+This is a placeholder for the future movement system.
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster moves! [1m([0mMovement system not yet          ]8;id=346134;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=795867;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         implemented[1m)[0m                                         [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster's turn ends. Conditions & effects        ]8;id=100775;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=735368;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target decides to attack Test Caster.           ]8;id=204027;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=359410;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m14[0m[1m)[0m + [1;36m1[0m = `[1;36m15[0m` = attack_mod ->  ]8;id=534448;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=388505;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m1[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target attacks Test Caster with Club [1m([0mnormal[1m)[0m.  ]8;id=768395;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=768415;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1m([0m1d20 [1m([0m[1;36m14[0m[1m)[0m + [1;36m1[0m = `[1;36m15[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=725553;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=576463;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Caster [1m([0mAC [1;36m14[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33mTest Target hits Test Caster with Club for 1d6 [0m[1;33m([0m[1;36m3[0m[1;33m)[0m[1;33m +[0m ]8;id=401789;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=110039;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m1[0m[1;33m = `[0m[1;36m4[0m[1;33m` damage![0m                                      [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster's HP is now [1;36m21[0m.                          ]8;id=36046;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=375588;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target's turn ends. Conditions & effects        ]8;id=380386;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=642606;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m2[0m[1;33m ---[0m                               ]8;id=331705;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=513550;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m3[0m[1;33m: Start!---[0m                               ]8;id=75418;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=145993;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Caster's turn with [1;36m21[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Cast a Spell
+[1;36m3[0m. Move
+Test Caster moves! [1m([0mMovement system not yet implemented[1m)[0m
+This is a placeholder for the future movement system.
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster moves! [1m([0mMovement system not yet          ]8;id=40893;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=662822;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         implemented[1m)[0m                                         [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster's turn ends. Conditions & effects        ]8;id=379183;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=427228;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target decides to attack Test Caster.           ]8;id=802360;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=148133;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m9[0m[1m)[0m + [1;36m1[0m = `[1;36m10[0m` = attack_mod ->   ]8;id=896389;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=508870;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m1[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target attacks Test Caster with Club [1m([0mnormal[1m)[0m.  ]8;id=582720;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=492958;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1m([0m1d20 [1m([0m[1;36m9[0m[1m)[0m + [1;36m1[0m = `[1;36m10[0m`[1m)[0m [1m([0mnormal[1m)[0m to  ]8;id=122621;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=193768;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Caster [1m([0mAC [1;36m14[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target misses Test Caster with Club!            ]8;id=302602;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=43200;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target's turn ends. Conditions & effects        ]8;id=530966;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=45594;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m3[0m[1;33m ---[0m                               ]8;id=821978;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=674232;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- Round [0m[1;36m4[0m[1;33m: Start!---[0m                               ]8;id=964775;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=674650;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+
+Test Caster's turn with [1;36m21[0m HP!
+[1;36m1[0m. Attack
+[1;36m2[0m. Cast a Spell
+[1;36m3[0m. Move
+Test Caster moves! [1m([0mMovement system not yet implemented[1m)[0m
+This is a placeholder for the future movement system.
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster moves! [1m([0mMovement system not yet          ]8;id=895549;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=866159;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         implemented[1m)[0m                                         [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Caster's turn ends. Conditions & effects        ]8;id=914134;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=806222;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target decides to attack Test Caster.           ]8;id=503082;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=322628;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m attack_roll -> 1d20 [1m([0m[1;36m10[0m[1m)[0m + [1;36m1[0m = `[1;36m11[0m` = attack_mod ->  ]8;id=320769;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=975185;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m1[0m, adv_disadv -> normal                              [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target attacks Test Caster with Club [1m([0mnormal[1m)[0m.  ]8;id=452753;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=824115;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target rolls [1m([0m1d20 [1m([0m[1;36m10[0m[1m)[0m + [1;36m1[0m = `[1;36m11[0m`[1m)[0m [1m([0mnormal[1m)[0m to ]8;id=928244;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=358038;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         hit Test Caster [1m([0mAC [1;36m14[0m[1m)[0m.                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target misses Test Caster with Club!            ]8;id=656887;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=163815;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m Test Target's turn ends. Conditions & effects        ]8;id=317397;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=77585;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         updated.                                             [2m                   [0m
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;33m--- End Of Round [0m[1;36m4[0m[1;33m ---[0m                               ]8;id=981444;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=325771;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m [1;36m--- Combat ended after [0m[1;36m4[0m[1;36m rounds [0m[1;36m([0m[1;36mtest limit[0m[1;36m)[0m[1;36m. ---[0m    ]8;id=320979;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=2576;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                   [0m[2;36m [0m[34mINFO    [0m                                                      ]8;id=414779;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py\[2mcombat_engine.py[0m]8;;\[2m:[0m]8;id=732665;file:///media/yarvis/WD_Elements/repos/ChatDND/2025/AIRPGrok-2/combat_engine/combat_engine.py#43\[2m43[0m]8;;\
+[2;36m                    [0m         [1;36m--- Combat has ended after [0m[1;36m4[0m[1;36m rounds. ---[0m             [2m                   [0m
+[1;35mThank you for playing! Exiting combat engine[0m[1;35m...[0m
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

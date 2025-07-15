@@ -1,0 +1,235 @@
+{
+  "players": [
+    {
+      "name": "Condition Caster",
+      "description": "A spellcaster who specializes in applying conditions to enemies",
+      "hp": 60,
+      "ac": 14,
+      "strength": 10,
+      "dexterity": 12,
+      "constitution": 12,
+      "intelligence": 16,
+      "wisdom": 14,
+      "charisma": 10,
+      "class_type": "wizard",
+      "damage": "1d4",
+      "inventory": [
+        {
+          "name": "Staff",
+          "description": "A magical staff for spellcasting",
+          "type": "melee",
+          "damage": "1d6",
+          "finesse": false,
+          "versatile": null,
+          "mod": "strength"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Blinding Light",
+          "description": "A brilliant flash of light that blinds enemies",
+          "type": "utility",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "vision",
+            "modifier": "blinded",
+            "duration": 2
+          },
+          "save": "constitution",
+          "dc": 14,
+          "targeting": "single"
+        },
+        {
+          "name": "Poison Spray",
+          "description": "A toxic cloud that poisons enemies",
+          "type": "damage",
+          "damage": "2d12",
+          "healing": null,
+          "effect": {
+            "attribute": "health",
+            "modifier": "poisoned",
+            "duration": 1
+          },
+          "save": "constitution",
+          "dc": 13,
+          "targeting": "single"
+        },
+        {
+          "name": "Hold Person",
+          "description": "Paralyzes a humanoid with magical force",
+          "type": "utility",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "actions",
+            "modifier": "incapacitated",
+            "duration": 10
+          },
+          "save": "wisdom",
+          "dc": 15,
+          "targeting": "single"
+        },
+        {
+          "name": "Stunning Strike",
+          "description": "A precise strike that stuns the target",
+          "type": "utility",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "actions",
+            "modifier": "stunned",
+            "duration": 1
+          },
+          "save": "constitution",
+          "dc": 14,
+          "targeting": "single"
+        }
+      ],
+      "conditions": {}
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Healer Priest",
+      "description": "A cleric who specializes in healing and removing conditions",
+      "hp": 35,
+      "ac": 16,
+      "strength": 12,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 10,
+      "wisdom": 16,
+      "charisma": 12,
+      "class_type": "cleric",
+      "damage": "1d6",
+      "inventory": [
+        {
+          "name": "Mace",
+          "description": "A simple mace for close combat",
+          "type": "melee",
+          "damage": "1d6",
+          "finesse": false,
+          "versatile": null,
+          "mod": "strength"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Cure Wounds",
+          "description": "Heals wounds with positive energy",
+          "type": "healing",
+          "damage": null,
+          "healing": "1d8+3",
+          "effect": null,
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Lesser Restoration",
+          "description": "Removes one condition from a target",
+          "type": "utility",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "condition_removal",
+            "modifier": "remove_one",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Greater Restoration",
+          "description": "Removes all conditions from a target",
+          "type": "utility",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "condition_removal",
+            "modifier": "remove_all",
+            "duration": 0
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Bless",
+          "description": "Grants advantage on attack rolls and saving throws",
+          "type": "buff",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "adv_disadv",
+            "modifier": "advantage",
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        }
+      ],
+      "conditions": {},
+      "ai_type": "healer"
+    },
+    {
+      "name": "High HP Target",
+      "description": "A high-HP melee fighter that can be targeted by both condition spells and healing",
+      "hp": 80,
+      "ac": 16,
+      "strength": 18,
+      "dexterity": 12,
+      "constitution": 16,
+      "intelligence": 8,
+      "wisdom": 10,
+      "charisma": 8,
+      "class_type": "fighter",
+      "damage": "1d10",
+      "inventory": [
+        {
+          "name": "Greatsword",
+          "description": "A massive two-handed sword",
+          "type": "melee",
+          "damage": "2d6",
+          "finesse": false,
+          "versatile": null,
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {},
+      "ai_type": "aggressive"
+    },
+    {
+      "name": "Conditioned Warrior",
+      "description": "A warrior who will receive conditions for testing removal",
+      "hp": 50,
+      "ac": 15,
+      "strength": 16,
+      "dexterity": 12,
+      "constitution": 14,
+      "intelligence": 8,
+      "wisdom": 10,
+      "charisma": 8,
+      "class_type": "fighter",
+      "damage": "1d8",
+      "inventory": [
+        {
+          "name": "Longsword",
+          "description": "A reliable longsword for combat",
+          "type": "melee",
+          "damage": "1d8",
+          "finesse": false,
+          "versatile": null,
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {},
+      "ai_type": "aggressive"
+    }
+  ]
+} 

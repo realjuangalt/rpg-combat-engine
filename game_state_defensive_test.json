@@ -1,0 +1,304 @@
+{
+  "players": [
+    {
+      "name": "Test Healer",
+      "description": "A test character with all defensive spells for testing buffs, heals, and condition removal",
+      "hp": 60,
+      "ac": 16,
+      "strength": 12,
+      "dexterity": 14,
+      "constitution": 16,
+      "intelligence": 14,
+      "wisdom": 18,
+      "charisma": 12,
+      "class_type": "cleric",
+      "damage": "1d6",
+      "inventory": [
+        {
+          "name": "Healing Staff",
+          "description": "A staff that channels healing energy",
+          "type": "magic",
+          "damage": "1d6",
+          "finesse": false,
+          "versatile": null,
+          "mod": "wisdom"
+        }
+      ],
+      "spells": [
+        {
+          "name": "Cure Wounds",
+          "description": "Heals wounds with positive energy",
+          "type": "healing",
+          "damage": null,
+          "healing": "1d8+4",
+          "effect": null,
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Mass Healing Word",
+          "description": "Heals multiple allies with a word of power",
+          "type": "healing",
+          "damage": null,
+          "healing": "1d4+4",
+          "effect": null,
+          "save": null,
+          "dc": null,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Bless",
+          "description": "Blesses allies with divine favor",
+          "type": "buff",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "adv_disadv",
+            "modifier": "advantage",
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Shield of Faith",
+          "description": "Surrounds an ally with divine protection",
+          "type": "buff",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "ac",
+            "modifier": 2,
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Lesser Restoration",
+          "description": "Removes one disease or condition",
+          "type": "utility",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "condition_removal",
+            "modifier": "remove_one",
+            "duration": 1
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Greater Restoration",
+          "description": "Removes all conditions and restores ability scores",
+          "type": "utility",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "condition_removal",
+            "modifier": "remove_all",
+            "duration": 1
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Protection from Evil and Good",
+          "description": "Protects against certain creature types",
+          "type": "buff",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "adv_disadv",
+            "modifier": "advantage",
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Aid",
+          "description": "Increases maximum HP and current HP",
+          "type": "buff",
+          "damage": null,
+          "healing": "5",
+          "effect": {
+            "attribute": "hp",
+            "modifier": 5,
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "aoe"
+        },
+        {
+          "name": "Heroism",
+          "description": "Makes target immune to fear and grants temporary HP",
+          "type": "buff",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "fear_immunity",
+            "modifier": "immune",
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        },
+        {
+          "name": "Freedom of Movement",
+          "description": "Makes target immune to paralysis and restraint",
+          "type": "buff",
+          "damage": null,
+          "healing": null,
+          "effect": {
+            "attribute": "movement_immunity",
+            "modifier": "immune",
+            "duration": 3
+          },
+          "save": null,
+          "dc": null,
+          "targeting": "single"
+        }
+      ],
+      "conditions": {}
+    }
+  ],
+  "npcs": [
+    {
+      "name": "Blinded Enemy",
+      "description": "An enemy that starts blinded to test condition removal",
+      "hp": 30,
+      "ac": 13,
+      "strength": 12,
+      "dexterity": 14,
+      "constitution": 12,
+      "intelligence": 8,
+      "wisdom": 10,
+      "charisma": 6,
+      "class_type": "fighter",
+      "damage": "1d6",
+      "inventory": [
+        {
+          "name": "Rusty Sword",
+          "description": "A rusty but functional sword",
+          "type": "melee",
+          "damage": "1d6",
+          "finesse": false,
+          "versatile": null,
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {
+        "blinded": {
+          "active": true,
+          "duration": 5
+        }
+      }
+    },
+    {
+      "name": "Poisoned Enemy",
+      "description": "An enemy that starts poisoned to test condition removal",
+      "hp": 25,
+      "ac": 12,
+      "strength": 10,
+      "dexterity": 12,
+      "constitution": 10,
+      "intelligence": 8,
+      "wisdom": 8,
+      "charisma": 6,
+      "class_type": "fighter",
+      "damage": "1d6",
+      "inventory": [
+        {
+          "name": "Dagger",
+          "description": "A simple dagger",
+          "type": "melee",
+          "damage": "1d4",
+          "finesse": true,
+          "versatile": null,
+          "mod": "dexterity"
+        }
+      ],
+      "spells": [],
+      "conditions": {
+        "poisoned": {
+          "active": true,
+          "duration": 5
+        }
+      }
+    },
+    {
+      "name": "Restrained Enemy",
+      "description": "An enemy that starts restrained to test condition removal",
+      "hp": 35,
+      "ac": 14,
+      "strength": 14,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 8,
+      "wisdom": 10,
+      "charisma": 6,
+      "class_type": "fighter",
+      "damage": "1d8",
+      "inventory": [
+        {
+          "name": "Battle Axe",
+          "description": "A heavy battle axe",
+          "type": "melee",
+          "damage": "1d8",
+          "finesse": false,
+          "versatile": null,
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {
+        "restrained": {
+          "active": true,
+          "duration": 5
+        }
+      }
+    },
+    {
+      "name": "Frightened Enemy",
+      "description": "An enemy that starts frightened to test condition removal",
+      "hp": 20,
+      "ac": 11,
+      "strength": 8,
+      "dexterity": 12,
+      "constitution": 10,
+      "intelligence": 8,
+      "wisdom": 8,
+      "charisma": 6,
+      "class_type": "fighter",
+      "damage": "1d4",
+      "inventory": [
+        {
+          "name": "Club",
+          "description": "A simple club",
+          "type": "melee",
+          "damage": "1d4",
+          "finesse": false,
+          "versatile": null,
+          "mod": "strength"
+        }
+      ],
+      "spells": [],
+      "conditions": {
+        "frightened": {
+          "active": true,
+          "duration": 5
+        }
+      }
+    }
+  ]
+} 
